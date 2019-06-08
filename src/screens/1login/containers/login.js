@@ -1,77 +1,54 @@
 import React, {Component} from 'react';
-import {ScrollView, TouchableOpacity,ImageBackground, Text, View, StyleSheet,Image} from 'react-native';
 
-import Layout from '../layout-login';
+import Logo from '../components/logo';
+import Layout from '../components/layout';
 import NameInput from '../components/name-input';
 import CelInput from '../components/cel-input';
 import OkBtn from '../components/ok-btn';
+import moment from "moment";
 
 class Login extends Component {
-	 constructor(props) {
-    super(props);
-    this.cel = React.createRef();
+	constructor(props) {
+	    super(props);
+	    this.state = {
+	    	name:'',
+	    	cel:'',
+	    }
 	}
 	handlePress = ()=> {
-		//funcion para el boton de login
-		console.log('cambiando a Home')
-		this.props.navigation.navigate('Home')
-		console.log('Home')
+			//funcion para el boton de login
+		if (this.state.name === '' ){
+			alert('Por favor ingrese un nombre valido')
+		}
+		else if (this.state.cel.length !== 10){
+			alert('Por favor ingrese un numero de celular valido')
+		}
+		else{
+			console.log('valido')
+			console.log(this.state)
+			console.log('cambiando a Home')
+			this.props.navigation.navigate('Home')
+			console.log('Home')
+		}
+
 	}
-	onEndName = ()=> {		 //verificar un nombre valido 
- 		console.log('nombre escrito') 
-	}
+	onChangeName = (text) => this.setState({name:text})
+	onChangeCel = (text) => this.setState({cel:text})
 	render(){
 		return(
 			<Layout>
-				<View style={styles.logo} >
-					<Image
-						style={styles.imageLogo}
-						source = {require('../../../../assets/images/logo5.png')} />
-				</View>		
-				<View style={styles.layout} > 
+				<Logo/>
+				<Layout> 
 					<NameInput
-						onEndName= {this.onEndName} />
+						onChangeName= {this.onChangeName} />
 					<CelInput
-
-					/>
+						onChangeCel={this.onChangeCel} />
 					<OkBtn 
 						onPress={this.handlePress}/>
-				</View>
+				</Layout>
 			</Layout>
-			)
+		)
 	}
-
 }
-
-const styles =StyleSheet.create({
-	
-	logo:{
-		flex: 1,
-		/*borderColor: 'red',
-		borderWidth: 3,*/
-		margin:10,
-		padding:0,
-		justifyContent: 'flex-start',
-		alignItems: 'center',  
-
-
-	},
-	imageLogo:{
-		width:280,
-		height:280,
-		resizeMode: 'contain',
-		borderColor: '#000000',
-		
-	},
-	layout:{
-		flex: 1,
-		flexDirection: 'column',
-		justifyContent: 'flex-end',
-		alignItems: 'center',
-
-		/*borderColor: 'red',
-		borderWidth: 3,*/
-	}
-})
 
 export default Login;

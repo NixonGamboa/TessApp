@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-import Layout from './layout-shopping-view';
+import Layout from '../../sections/layout-view';
 import ShoppingList from './containers/shopping-list';
 
 const listaDeCompras=[

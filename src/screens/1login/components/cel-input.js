@@ -9,9 +9,9 @@ function CelInput (props){
 				keyboardType="phone-pad"
 				placeholder="Celular:"
 				placeholderTextColor= "#f5fffa88"
-			>
-			
-			</TextInput>
+				onSubmitEditing={props.onEndCel}
+				onChangeText={props.onChangeCel}
+				value={props.cel} />
 		</View>
 	)
 }
@@ -22,8 +22,6 @@ const styles =StyleSheet.create({
 		marginVertical: 4,
 		justifyContent: 'center',
 		alignItems: 'flex-start',
-		
-
 	},
 	txtCelular:{
 		color:'#000',

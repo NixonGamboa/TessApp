@@ -16,25 +16,20 @@ const styles =StyleSheet.create({
 	layout:{
 		width: 81, 
 		height: 81,
+		borderWidth: 3,
 		borderRadius: 40,
-		marginVertical: 4,
 		justifyContent: 'center',
 		alignItems: 'center',
-
-		borderWidth: 3,
-		borderBottomWidth: 2,
 		borderColor: '#000000',
 		backgroundColor: '#15aebb',
-		marginBottom: 40,
-		marginTop: 10
+		marginVertical: 8,
 	},
 	txtBtn:{
-		color:'#ffffff',
-		fontStyle: 'normal',
+		color:'#fff',
 		fontSize: 32,
+		fontStyle: 'normal',
 		fontWeight: 'bold', 
 		fontFamily: 'cursive',
-		fontWeight:'bold',
 		textAlignVertical: 'center',
 		justifyContent: 'center',  
 	}

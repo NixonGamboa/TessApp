@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-import Layout from './layout-vista3'
+import Layout from '../../sections/layout-view'
 import ProductsList from './containers/products-list';
 
 
