@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {StyleSheet } from 'react-native';
 
-import Layout from './layout-view';
+import Layout from '../../sections/layout-view';
 import PhotoList from './containers/photo-list';
 import Description from './containers/description';
 

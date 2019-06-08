@@ -8,7 +8,9 @@ function AddNote (props) {
       		<Text style={styles.txtTitle}>
       		   Notas Adicionales:
       		</Text>
-      		<TextInput style={styles.txt}/>
+      		<TextInput 
+      			style={styles.txt}
+      			onChangeText={props.onChangeNote}/>
 	  </View>
     )
 }

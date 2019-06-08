@@ -1,6 +1,12 @@
 import React from 'react';
 import {View, StyleSheet, Text, TextInput, Picker, TouchableOpacity} from 'react-native';
 import DatePicker from 'react-native-datepicker';
+import moment from "moment";
+
+import PushButton from '../../../sections/push-button';
+
+var dateNow = moment().format('LL');
+var maxDate = moment().add(3, 'months').format('LL');
 
 const customStyles={
         dateInput:{
@@ -51,18 +57,19 @@ function Form (props){
             style={styles.address}
             placeholder='Dirección:'
             placeholderTextColor='#0008'
-            autoFocus={true}
-            blurOnSubmit={true}
+            //autoFocus={true}
+            //blurOnSubmit={true}
             keyboardType='default'
-            returnKeyType='next' />
+            returnKeyType='next'
+            onChangeText={props.onAddressChange} />
             <DatePicker
               style={styles.datePicker}
               date={props.date}
               mode="date"
               placeholder="Fecha de entrega: "
               format="LL"
-              //minDate="01/06/2019"
-              //maxDate="01/06/2020"
+              minDate={dateNow}
+              maxDate={maxDate}
               confirmBtnText="Confirm" //iOS
               cancelBtnText="Cancel"   //iOS
               customStyles={customStyles}
@@ -73,7 +80,7 @@ function Form (props){
               date={props.time}
               mode="time"
               placeholder="Hora de entrega: "
-              format="h:mm a"
+              format="hh:mm a"
               confirmBtnText="Confirm" //iOS
               cancelBtnText="Cancel"   //iOS
               customStyles={customStyles}
@@ -94,18 +101,9 @@ function Form (props){
             </View>
         </View>
         <View style={styles.asd}>
-          <TouchableOpacity
-            style = {styles.button}
-            onPress = {props.handlePress}
-            activeOpacity = {0.8}
-            hitSlop = {{
-              left:5,
-              top:5,
-              bottom: 5,
-              right: 5,
-              }} >
-              <Text style ={styles.buttonTxt} >Finalizar</Text> 
-          </TouchableOpacity>
+          <PushButton
+            txt='Finalizar'
+            onPress = {props.handlePress} />
         </View>
       </View>
   )
@@ -186,34 +184,6 @@ const styles=StyleSheet.create({
     alignItems:'flex-end',
     justifyContent: 'center',
   },
-  button:{
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 56,
-    width: 140,
-    marginRight: 8,
-    borderWidth: 1,
-    borderRadius: 28,
-    borderColor: '#00ff0077',
-    backgroundColor: 'green',
-  },
-  buttonTxt:{
-    fontSize: 24,
-    fontFamily: 'sans-serif',
-    fontStyle: 'italic', 
-    fontWeight:'bold',
-    color: '#fff',
-    textAlign: 'center' ,
-    textAlignVertical:'center',
-    textShadowOffset: {
-      width: 2,
-      height: 2
-    },
-    textShadowColor: '#000',
-    textShadowRadius: 3,
-  },
 })
-
-      
 
 export default Form;

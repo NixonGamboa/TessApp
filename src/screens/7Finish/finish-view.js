@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-import Layout from './finish-layout'
+import Layout from '../../sections/layout-view'
 import Finish from './containers/finish';
 
 

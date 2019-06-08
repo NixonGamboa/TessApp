@@ -2,9 +2,9 @@ import React from "react";
 import { View, Text } from "react-native";
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
-import Login from './src/screens/1login/containers/login.js';
+import Login from './src/screens/1login/login-view';
 import Home from './src/screens/2home/home';
-import Category from './src/screens/3category/vista-categoria';
+import Category from './src/screens/3category/category-view';
 import Article from './src/screens/4article/product-view';
 import Cart from './src/screens/5cart/shopping-view';
 import RegisterForm from './src/screens/6Form/register-form-view';

@@ -8,14 +8,11 @@ function NameInput (props){
 				style={styles.txtName}
 				placeholder="Nombre:"
 				placeholderTextColor= "#f5fffa88"
-				onSubmitEditing={props.onEndName}
-			>
-			Nixon Gamboa
-			</TextInput>
+				autoCapitalize = "words"
+				onChangeText={props.onChangeName}/>
 		</View>
 	)
 }
-
 const styles =StyleSheet.create({
 	layout:{
 		width: '70%', 
@@ -23,8 +20,6 @@ const styles =StyleSheet.create({
 		marginVertical: 4,
 		justifyContent: 'center',
 		alignItems: 'flex-start',
-		
-
 	},
 	txtName:{
 		color:'#000',

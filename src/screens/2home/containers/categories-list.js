@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {FlatList, TouchableOpacity, View, Text} from 'react-native';
 
 import Category from '../components/category';
-import Layout from '../components/layout';
+import Layout from '../components/categories-layout';
 
 class Categories extends Component {
 	handlePress = ()=> {
