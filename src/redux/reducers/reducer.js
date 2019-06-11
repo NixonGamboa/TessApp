@@ -7,7 +7,13 @@ function reducer(state = {}, action){
 			return{...state, ...action.payload}
 		}
 		case 'SET_SELECTED_CATEGORY':{
-			return {...state,selectedCategory:action.payload.category}
+			return {...state, selectedCategory:action.payload.category}
+		}
+		case 'SET_USERNAME':{
+			return {...state, userName:action.payload.userName }
+		}
+		case 'SET_USERCEL':{
+			return {...state, userCel:action.payload.userCel }
 		}
 		default:
 			return state;

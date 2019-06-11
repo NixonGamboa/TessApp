@@ -10,8 +10,9 @@ function CelInput (props){
 				placeholder="Celular:"
 				placeholderTextColor= "#f5fffa88"
 				onSubmitEditing={props.onEndCel}
-				onChangeText={props.onChangeCel}
-				value={props.cel} />
+				onChangeText={props.onChangeCel} >
+					{props.cel}
+				</TextInput>
 		</View>
 	)
 }

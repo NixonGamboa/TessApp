@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 import Logo from '../components/logo';
 import Layout from '../components/layout';
@@ -7,48 +8,62 @@ import CelInput from '../components/cel-input';
 import OkBtn from '../components/ok-btn';
 import moment from "moment";
 
-class Login extends Component {
-	constructor(props) {
-	    super(props);
-	    this.state = {
-	    	name:'',
-	    	cel:'',
-	    }
+function mapStateToProps(state){
+	console.log(state)
+	return{
+		name:state.userName,
+		cel:state.userCel,
 	}
+}
+
+class Login extends Component {
 	handlePress = ()=> {
-			//funcion para el boton de login
-		if (this.state.name === '' ){
+		if (this.props.name === '' ){
 			alert('Por favor ingrese un nombre valido')
 		}
-		else if (this.state.cel.length !== 10){
+		else if (this.props.cel.length !== 10){
 			alert('Por favor ingrese un numero de celular valido')
 		}
 		else{
 			console.log('valido')
-			console.log(this.state)
-			console.log('cambiando a Home')
 			this.props.navigation.navigate('Home')
 			console.log('Home')
 		}
 
 	}
-	onChangeName = (text) => this.setState({name:text})
-	onChangeCel = (text) => this.setState({cel:text})
+	onChangeName = (text) => {
+		this.props.dispatch({
+			type:'SET_USERNAME',
+			payload:{
+				userName:text,
+			}
+		})
+	}
+	onChangeCel = (text) => {
+		this.props.dispatch({
+			type:'SET_USERCEL',
+			payload:{
+				userCel:text,
+			}
+		})
+	}
 	render(){
 		return(
 			<Layout>
 				<Logo/>
 				<Layout> 
 					<NameInput
-						onChangeName= {this.onChangeName} />
+						onChangeName= {this.onChangeName}
+						name={this.props.name} />
 					<CelInput
-						onChangeCel={this.onChangeCel} />
+						onChangeCel={this.onChangeCel} 
+						cel={this.props.cel} />
 					<OkBtn 
-						onPress={this.handlePress}/>
+						onPress={this.handlePress} />
 				</Layout>
 			</Layout>
 		)
 	}
 }
 
-export default Login;
+export default connect(mapStateToProps)(Login);

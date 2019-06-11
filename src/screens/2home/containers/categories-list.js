@@ -8,31 +8,31 @@ import Layout from '../components/categories-layout';
 
 
 function mapStateToProps(state){
+	console.log(state)
 	return {
 		list:state.categories
 	}
 }
 
 class Categories extends Component {
-	handlePress = ()=> {
+	keyExtractor = item => item.id.toString()
+	handlePress = item=> {
 		console.log('Cambiando a vista de categoria')
 		this.props.navigation.navigate('Category',{
-			title:'Categorias'
+			title:'Categorias' })
+		this.props.dispatch({
+			type:'SET_SELECTED_CATEGORY',
+			payload:{
+				category:item,
+			}
 		})
-		console.log('Vista de categoria')
-		//this.props.dispatch({
-		//	type:'SET_SELECTED_CATEGORY',
-		//	payload:{
-		//		category:'item',
-		//	}
-		//})
 	}
-	keyExtractor = item => item.id.toString()
 	renderItem = ({item}) => {
 		return(
 			<Category
-				onPress={this.handlePress()} 
-				{...item} />
+				{...item} 
+				onPress={()=>{this.handlePress(item)}} 
+				/>
 		)
 	}
 	render(){

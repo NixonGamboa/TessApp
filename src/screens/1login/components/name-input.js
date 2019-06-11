@@ -9,7 +9,9 @@ function NameInput (props){
 				placeholder="Nombre:"
 				placeholderTextColor= "#f5fffa88"
 				autoCapitalize = "words"
-				onChangeText={props.onChangeName}/>
+				onChangeText={props.onChangeName} >
+					{props.name}
+				</TextInput>
 		</View>
 	)
 }

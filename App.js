@@ -25,7 +25,7 @@ const AppNavigator = createStackNavigator(
     Finish
   },
   {
-    initialRouteName:'Home',
+    initialRouteName:'Login',
     defaultNavigationOptions: {
       title:'La Mejor App del Mundo',
       headerBackTitle:"Atras", //solo para iOS
