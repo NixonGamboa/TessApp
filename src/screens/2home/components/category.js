@@ -16,10 +16,10 @@ function Category (props) {
 				activeOpacity = {0.8}>
 			<ImageBackground
 				style = {styles.category}
-				source = {props.dir}
+				source = {{uri:props.medium_cover_image}}
 			>
 			<View style={styles.textContainer} >
-				<Text style={styles.text} > {props.title} </Text>
+				<Text style={styles.text} > {props.genres[0]} </Text>
 			</View>
 			</ImageBackground>
 			</TouchableOpacity>

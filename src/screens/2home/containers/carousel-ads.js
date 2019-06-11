@@ -2,10 +2,18 @@ import React,{Component} from 'react';
 import {Dimensions} from 'react-native';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 
+import {connect} from 'react-redux';
+
 import Add from '../components/add';
 import styles from '../components/pagination-styles';
 import CarouselLayout from '../components/carousel-layout';
 
+
+function mapStateToProps(state){
+  return {
+    list:state.movies
+  }
+}
 
 class CarouselAds extends Component {
   constructor(props) {
@@ -15,6 +23,7 @@ class CarouselAds extends Component {
       activeSlide :0,
     };
   }
+  keyExtractor = item => item.id.toString()
   _renderItem ({item}) {
       return (
         <Add {...item} />
@@ -27,6 +36,7 @@ class CarouselAds extends Component {
         <Carousel
           ref={(c) => { this._carousel = c; }}
           data={this.props.list}
+          keyExtractor = {this.keyExtractor}
           renderItem={this._renderItem}
           onSnapToItem={(index) => this.setState({ activeSlide: index }) }
           sliderWidth={Dimensions.get('window').width}
@@ -49,4 +59,4 @@ class CarouselAds extends Component {
   }
 }
 
-export default CarouselAds;
+export default connect(mapStateToProps)(CarouselAds);

@@ -5,11 +5,11 @@ function Add (props){
 	return(
 		<View style={styles.containerAdd} >
             <ImageBackground 
-              source = { props.dir }
+              source = {{uri:props.background_image}}
               style = {styles.add} >
                <View style={styles.txtContainer} >
-                  <Text style={styles.txtTitle} >{ props.title }</Text>
-                  <Text style={styles.txtSubtitle} >{ props.subtitle }</Text>
+                  <Text style={styles.txtTitle} >{ props.year}</Text>
+                  <Text style={styles.txtSubtitle} >{ props.title }</Text>
                 </View>
             </ImageBackground>
          </View>	
