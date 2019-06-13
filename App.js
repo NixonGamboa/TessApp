@@ -1,46 +1,14 @@
-import React from "react";
-import { View, Text } from "react-native";
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import React, {Component} from "react";
+import {store, persistor} from './src/redux/store';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 
-import Login from './src/screens/1login/login-view';
-import Home from './src/screens/2home/home';
-import Category from './src/screens/3category/category-view';
-import Article from './src/screens/4article/product-view';
-import Cart from './src/screens/5cart/shopping-view';
-import RegisterForm from './src/screens/6Form/register-form-view';
-import Finish from './src/screens/7Finish/finish-view';
+import AppNavigator from './app-navigator';
+import { ActivityIndicator } from "react-native";
 
 import API from './src/utils/api';
-import {store, persistor} from './src/redux/store';
 
-const AppNavigator = createStackNavigator(
-  { Login,
-    Home,
-    Category,
-    Article,
-    Cart,
-    RegisterForm,
-    Finish
-  },
-  {
-    initialRouteName:'Login',
-    defaultNavigationOptions: {
-      title:'La Mejor App del Mundo',
-      headerBackTitle:"Atras", //solo para iOS
-      gesturesEnabled:true,
-      },
-    headerMode:'float',
-    cardStyle:{ backgroundColor: 'red'},
-    headerLayoutPreset:'center',
-    headerTransitionPreset:'uikit',
-  }
-);
-
-const AppContainer = createAppContainer(AppNavigator);
-
-class App extends React.Component {
+class App extends Component {
   async componentDidMount(){
     const ads = await API.getAds(10);
     store.dispatch({
@@ -56,18 +24,15 @@ class App extends React.Component {
         categories
       }
     })
-    
-
   }
   render() {
     return (
       <Provider
-        store ={store}
-      >
+        store ={store} >
         <PersistGate
-          loading={<Text>Holiiiiiii</Text>}
+          loading={<ActivityIndicator/>}
           persistor={persistor} >
-            <AppContainer />
+            <AppNavigator />
         </PersistGate>
       </Provider>
     );

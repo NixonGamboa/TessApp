@@ -11,7 +11,7 @@ import CarouselLayout from '../components/carousel-layout';
 
 function mapStateToProps(state){
   return {
-    list:state.movies
+    list:state.ads
   }
 }
 

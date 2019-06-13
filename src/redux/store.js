@@ -8,9 +8,14 @@ const persistConfig = {
   storage,
 }
 
-const persistedReducer = persistReducer(persistConfig, reducer)
+const stateInit = {
+	userName:'',
+	userCel:'',
+}
 
-const store = createStore(persistedReducer)
+const persistedReducer = persistReducer(persistConfig,reducer)
+
+const store = createStore(persistedReducer,stateInit)
 const persistor = persistStore(store)
 
 export {store, persistor};

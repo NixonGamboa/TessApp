@@ -16,7 +16,7 @@ function mapStateToProps(state){
 
 class Categories extends Component {
 	keyExtractor = item => item.id.toString()
-	handlePress = item=> {
+	handlePress = (item) => {
 		console.log('Cambiando a vista de categoria')
 		this.props.navigation.navigate('Category',{
 			title:'Categorias' })
