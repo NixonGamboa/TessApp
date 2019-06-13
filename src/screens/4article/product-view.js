@@ -33,6 +33,7 @@ class ProductView extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
         title: navigation.getParam('title')
+        
       }
   }
 

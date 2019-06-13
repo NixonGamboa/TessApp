@@ -19,7 +19,7 @@ function Category (props) {
 				source = {{uri:props.medium_cover_image}}
 			>
 			<View style={styles.textContainer} >
-				<Text style={styles.text} > {props.genres[0]} </Text>
+				<Text style={styles.text} > {props.title} </Text>
 			</View>
 			</ImageBackground>
 			</TouchableOpacity>

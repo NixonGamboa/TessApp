@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 
 import AppNavigator from './app-navigator';
-import { ActivityIndicator } from "react-native";
+import Load from './src/sections/loading';
 
 import API from './src/utils/api';
 
@@ -30,7 +30,7 @@ class App extends Component {
       <Provider
         store ={store} >
         <PersistGate
-          loading={<ActivityIndicator/>}
+          loading={<Load/>}
           persistor={persistor} >
             <AppNavigator />
         </PersistGate>

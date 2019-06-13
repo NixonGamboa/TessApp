@@ -11,6 +11,8 @@ const persistConfig = {
 const stateInit = {
 	userName:'',
 	userCel:'',
+	ads:[],
+	categories:[],
 }
 
 const persistedReducer = persistReducer(persistConfig,reducer)
