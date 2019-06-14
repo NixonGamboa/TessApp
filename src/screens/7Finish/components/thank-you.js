@@ -38,7 +38,6 @@ const styles=StyleSheet.create({
     paddingVertical: 24,
     justifyContent:'space-between',
     alignItems: 'center',
-    borderWidth: 2,
   },
   subtitleContainer:{
     flex:1,

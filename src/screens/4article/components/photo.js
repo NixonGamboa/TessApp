@@ -6,17 +6,15 @@ import { View,ImageBackground, Text,TouchableOpacity,StyleSheet} from 'react-nat
 function Photo (props) {
     return (
       	<View style={styles.containerAdd} >
-            <TouchableOpacity activeOpacity={0.95} >
-                <ImageBackground 
-                  source = { props.dir }
-                  style = {styles.add} >
-                   	{/*<View style={styles.txtContainer} >
-                      	<Text style={styles.txtTitle} >{ props.title }</Text>
-                      	<Text style={styles.txtSubtitle} >{ props.subtitle }</Text>
-                    </View>*/}
-                </ImageBackground>
-            </TouchableOpacity>
-      	</View>
+            <ImageBackground 
+              source = { props.dir }
+              style = {styles.add} >
+               	{/*<View style={styles.txtContainer} >
+                  	<Text style={styles.txtTitle} >{ props.title }</Text>
+                  	<Text style={styles.txtSubtitle} >{ props.subtitle }</Text>
+                </View>*/}
+            </ImageBackground>
+        </View>
     )
 }
 
@@ -25,7 +23,7 @@ const styles = StyleSheet.create({
     margin:0,
     borderRadius: 10,
     overflow: 'hidden', 
-    height:280,
+    height:350,
   },
   add:{
     width: '100%',

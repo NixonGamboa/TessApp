@@ -8,18 +8,21 @@ function LayoutView (props){
       <ImageBackground 
       source={require('../../assets/images/back1.jpg')}
       style ={styles.background} >
-        <KeyboardAvoidingView 
-          behavior='position'
-          keyboardVerticalOffset={-190}>
-            <ScrollView
-              nestedScrollEnabled={true}>
-              <View style={styles.container} >
-                
-                {props.children}
+        <View 
+          style = {styles.containerColor} >
+            <KeyboardAvoidingView 
+              behavior='position'
+              keyboardVerticalOffset={-190}>
+                <ScrollView
+                  nestedScrollEnabled={true}>
+                  <View style={styles.container} >
+                    
+                    {props.children}
 
-              </View>
-            </ScrollView>
-        </KeyboardAvoidingView>
+                  </View>
+                </ScrollView>
+            </KeyboardAvoidingView>
+        </View>  
       </ImageBackground>
     </SafeAreaView>
   )
@@ -32,10 +35,14 @@ const styles=StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  containerColor:{
+    backgroundColor: '#f3f3f322',
+    width: '100%',
+    height: '100%',
+  },
   container:{
     flex:1,
     height: Dimensions.get('window').height-Header.HEIGHT-24,
-    backgroundColor: '#f3f3f322',
   },
 })
 

@@ -12,6 +12,7 @@ class Home extends Component {
     return {
         //title: navigation.getParam('name')
     	title:'TessApp',
+    	header: null,
     	}
 	}
 	render(){

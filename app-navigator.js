@@ -24,12 +24,12 @@ const AppNavigator = createStackNavigator(
   {
     initialRouteName:'Home',
     defaultNavigationOptions: {
-      title:'La Mejor App del Mundo',
+      title:'TessApp',
       headerBackTitle:"Atras", //solo para iOS
       gesturesEnabled:true,
       },
-    headerMode:'float',
-    cardStyle:{ backgroundColor: 'red'},
+    headerMode:'screen',
+    cardStyle:{ backgroundColor: '#47add4'},
     headerLayoutPreset:'center',
     headerTransitionPreset:'uikit',
   }

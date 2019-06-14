@@ -20,7 +20,7 @@ const listaDelProducto=[
       key:'6',},
     ]
 
-const detalle = "Esto es una descripcion. Describir es explicar o exponer de manera adecuada, detallada y ordenada, cómo son las personas, animales, lugares, objetos, etc. La descripción sirve para ambientar la acción y hacer más creíbles los hechos que se narran."
+const detalle = "Esto es una descripcion. Describir es explicar o exponer de manera adecuada, detallada y ordenada, cómo son las personas, animales, lugares, objetos, etc. La descripción sirve para ambientar la acción."
 
 class ProductView extends Component {
 	constructor(props) {

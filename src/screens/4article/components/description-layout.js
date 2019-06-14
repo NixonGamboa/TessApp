@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 	totalContainer:{
 		flex:1,
 		paddingTop: 4,
-		paddingBottom: 32,
+		paddingBottom: 8,
 		paddingHorizontal: 8,
 		marginHorizontal: 8,
 	    justifyContent:'center',
