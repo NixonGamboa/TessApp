@@ -15,6 +15,9 @@ function reducer(state = {}, action){
 		case 'SET_USERCEL':{
 			return {...state, userCel:action.payload.userCel }
 		}
+		case 'SET_ACTIVEUSER':{
+			return {...state, userActive:action.payload.userActive }
+		}
 		default:
 			return state;
 	}

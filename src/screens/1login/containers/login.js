@@ -26,6 +26,13 @@ class Login extends Component {
 		}
 		else{
 			console.log('valido')
+			//AQUI ES DONDE SE PUEDE HACER UN LLAMADO FETCH AL API PARA VALIDAR
+			this.props.dispatch({
+				type:'SET_ACTIVEUSER',
+				payload:{
+					userActive:true,
+				}
+			})
 			this.props.navigation.navigate('Home')
 			console.log('Home')
 		}

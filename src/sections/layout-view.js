@@ -1,28 +1,33 @@
 import React from 'react';
-import {ImageBackground, ScrollView, KeyboardAvoidingView, View, StyleSheet, Dimensions} from 'react-native';
+import {SafeAreaView, ImageBackground, ScrollView, KeyboardAvoidingView, View, StyleSheet, Dimensions} from 'react-native';
 import { Header } from 'react-navigation';
 
 function LayoutView (props){
   return(
-    <ImageBackground 
-    source={require('../../assets/images/back1.jpg')}
-    style ={styles.background} >
-      <KeyboardAvoidingView 
-        behavior='position'
-        keyboardVerticalOffset={-190}>
-          <ScrollView
-            nestedScrollEnabled={true}>
-            <View style={styles.container} >
-              
-              {props.children}
+    <SafeAreaView style={styles.superContainer} >
+      <ImageBackground 
+      source={require('../../assets/images/back1.jpg')}
+      style ={styles.background} >
+        <KeyboardAvoidingView 
+          behavior='position'
+          keyboardVerticalOffset={-190}>
+            <ScrollView
+              nestedScrollEnabled={true}>
+              <View style={styles.container} >
+                
+                {props.children}
 
-            </View>
-          </ScrollView>
-      </KeyboardAvoidingView>
-    </ImageBackground>
+              </View>
+            </ScrollView>
+        </KeyboardAvoidingView>
+      </ImageBackground>
+    </SafeAreaView>
   )
 }
 const styles=StyleSheet.create({
+  superContainer:{
+    flex:1,
+  },
   background:{
     width: '100%',
     height: '100%',
@@ -30,8 +35,7 @@ const styles=StyleSheet.create({
   container:{
     flex:1,
     height: Dimensions.get('window').height-Header.HEIGHT-24,
-    backgroundColor: '#4c4c4c22',
-    borderWidth: 2
+    backgroundColor: '#f3f3f322',
   },
 })
 
