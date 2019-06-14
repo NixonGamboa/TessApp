@@ -33,6 +33,16 @@ const AppNavigator = createStackNavigator(
     headerTransitionPreset:'uikit',
   }
 );
+AppNavigator.navigationOptions = ({ navigation }) => {
+  let tabBarVisible = true;
+  if (navigation.state.index > 0) {
+    tabBarVisible = false;
+  }
+
+  return {
+    tabBarVisible,
+  };
+};
 
 //link para ver los iconos => https://oblador.github.io/react-native-vector-icons/
 
@@ -73,11 +83,17 @@ const TabNavigator = createBottomTabNavigator(
     tabBarPosition: 'top',
     tabBarOptions:{
       activeTintColor:'white',
-      activeBackgroundColor:'#7d218155',
+      activeBackgroundColor:'#c091bf',
+      //inactiveBackgroundColor:'#eadae9',
       labelStyle: {
         fontSize: 12,
-      }
-    }
+      },
+      style: {
+        borderTopWidth: 1,
+        borderTopColor: '#000',
+        backgroundColor: '#fff',
+      },
+    },
   }
 )
 

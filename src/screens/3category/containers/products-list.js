@@ -82,6 +82,7 @@ class Products extends Component {
 				 	numColumns={2}
 				 	renderItem={this.renderItem}
 				 	scrollEnabled={true}
+				 	nestedScrollEnabled={true}
 				/>
 			</Layout>
 		);

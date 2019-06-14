@@ -10,7 +10,8 @@ function LayoutView (props){
       <KeyboardAvoidingView 
         behavior='position'
         keyboardVerticalOffset={-190}>
-          <ScrollView>
+          <ScrollView
+            nestedScrollEnabled={true}>
             <View style={styles.container} >
               
               {props.children}

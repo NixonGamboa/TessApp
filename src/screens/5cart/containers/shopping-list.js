@@ -31,7 +31,8 @@ class ShoppingList extends Component {
 					data= {this.props.list}
 					ListEmptyComponent={this.renderEmpty}
 					ItemSeparatorComponent = {this.itemSeparator}
-					renderItem={this.renderItem} />
+					renderItem={this.renderItem}
+					nestedScrollEnabled={true} />
 				<Buttons
 					onPressAddMore={this.onPressAddMore}
 					onPressContinue={this.onPressContinue} />
