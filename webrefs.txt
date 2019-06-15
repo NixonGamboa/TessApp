@@ -1,0 +1,7 @@
+RNFirebase
+https://rnfirebase.io/docs/v5.x.x/auth/android
+
+Google signin
+https://github.com/react-native-community/react-native-google-signin
+
+

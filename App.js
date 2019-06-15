@@ -1,12 +1,16 @@
 import React, {Component} from "react";
 import {store, persistor} from './src/redux/store';
 import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react'
+import { PersistGate } from 'redux-persist/integration/react';
+
 
 import AppNavigator from './app-navigator';
 import Load from './src/sections/loading';
 
 import API from './src/utils/api';
+
+
+
 
 class App extends Component {
   async componentDidMount(){
