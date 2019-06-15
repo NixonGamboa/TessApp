@@ -18,6 +18,9 @@ function reducer(state = {}, action){
 		case 'SET_ACTIVEUSER':{
 			return {...state, userActive:action.payload.userActive }
 		}
+		case 'SET_LOGOUT':{
+			return state = action.payload.state
+		}
 		default:
 			return state;
 	}

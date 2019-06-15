@@ -8,15 +8,19 @@ import CelInput from '../components/cel-input';
 import OkBtn from '../components/ok-btn';
 import moment from "moment";
 
+import logi from '../../../firebase/google-signin';
+
 function mapStateToProps(state){
 	console.log(state)
 	return{
 		name:state.userName,
 		cel:state.userCel,
 	}
+	console.log(state)
 }
 
 class Login extends Component {
+	
 	handlePress = ()=> {
 		if (this.props.name === '' ){
 			alert('Por favor ingrese un nombre valido')
@@ -26,6 +30,7 @@ class Login extends Component {
 		}
 		else{
 			console.log('valido')
+			logi()
 			//AQUI ES DONDE SE PUEDE HACER UN LLAMADO FETCH AL API PARA VALIDAR
 			this.props.dispatch({
 				type:'SET_ACTIVEUSER',

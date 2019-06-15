@@ -24,7 +24,7 @@ function Form (props){
 
         <View style={styles.buttonContainer}>
           <PushButton
-            txt='Inicio'
+            txt='Salir'
             onPress = {props.handlePress} />
         </View>
       

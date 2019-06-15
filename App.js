@@ -7,28 +7,12 @@ import { PersistGate } from 'redux-persist/integration/react';
 import AppNavigator from './app-navigator';
 import Load from './src/sections/loading';
 
-import API from './src/utils/api';
 
 
 
 
 class App extends Component {
-  async componentDidMount(){
-    const ads = await API.getAds(10);
-    store.dispatch({
-      type:'SET_SUGGESTION_LIST',
-      payload:{
-        ads
-      }
-    })
-    const categories = await API.getCategories();
-    store.dispatch({
-      type:'SET_CATEGORY_LIST',
-      payload:{
-        categories
-      }
-    })
-  }
+  
   render() {
     return (
       <Provider
