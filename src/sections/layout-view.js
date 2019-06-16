@@ -5,9 +5,9 @@ import { Header } from 'react-navigation';
 function LayoutView (props){
   return(
     <SafeAreaView style={styles.superContainer} >
-      <ImageBackground 
+      {/*<ImageBackground 
       source={require('../../assets/images/back1.jpg')}
-      style ={styles.background} >
+      style ={styles.background} >*/}
         <View 
           style = {styles.containerColor} >
             <KeyboardAvoidingView 
@@ -23,7 +23,7 @@ function LayoutView (props){
                 </ScrollView>
             </KeyboardAvoidingView>
         </View>  
-      </ImageBackground>
+      {/*</ImageBackground>*/}
     </SafeAreaView>
   )
 }
@@ -36,13 +36,13 @@ const styles=StyleSheet.create({
     height: '100%',
   },
   containerColor:{
-    backgroundColor: '#f3f3f322',
+    backgroundColor: 'white',
     width: '100%',
     height: '100%',
   },
   container:{
     flex:1,
-    height: Dimensions.get('window').height-Header.HEIGHT-24,
+    height: Dimensions.get('window').height-Header.HEIGHT-18,
   },
 })
 

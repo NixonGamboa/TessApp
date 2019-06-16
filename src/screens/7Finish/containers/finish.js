@@ -24,7 +24,6 @@ class Finish extends Component {
         }
     }
   handlePress = ()=> {
-    alert('Volviendo a Home')
     this.props.dispatch({
       type:'SET_LOGOUT',
       payload:{

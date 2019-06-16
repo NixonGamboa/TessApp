@@ -40,7 +40,7 @@ class CarouselAds extends Component {
           renderItem={this._renderItem}
           onSnapToItem={(index) => this.setState({ activeSlide: index }) }
           sliderWidth={Dimensions.get('window').width}
-          itemWidth={Dimensions.get('window').width-16}
+          itemWidth={Dimensions.get('window').width}
           firstItem={this.state.activeSlide}
           useScrollView={true}
           autoplay={true}

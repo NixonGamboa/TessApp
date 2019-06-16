@@ -18,23 +18,23 @@ function Layout (props){
 
 const styles = StyleSheet.create({
 	containerLayout:{
-		margin:4,
+		//margin:4,
 		flex:1,
 	},
 	txtTitle:{
-		fontSize: 16,
+		fontSize: 14,
     textAlign:'center',
     textAlignVertical: 'center', 
     fontFamily: 'sans-serif',
-    color: '#fff',
+    color: '#000',
     textShadowOffset: {
       width: 1,
       height: 1
     },
     textShadowColor: '#000',
     textShadowRadius: 2,
-    marginTop: 8,
-    marginBottom: 8,
+    //marginTop: 8,
+    marginBottom: 4,
 	}
 })
 

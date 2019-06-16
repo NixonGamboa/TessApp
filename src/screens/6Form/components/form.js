@@ -22,10 +22,10 @@ const customStyles={
               marginRight: 8
             },
         dateText: {
-            fontSize: 20, 
+            fontSize: 18, 
             fontFamily: 'sans-serif',
             fontStyle: 'italic', 
-            color: '#fff',
+            color: '#000',
             textShadowOffset: {
               width: 1,
               height: 1
@@ -34,17 +34,10 @@ const customStyles={
             textShadowRadius: 2,
           },
         placeholderText:{
-            fontSize: 19, 
-            fontFamily: 'sans-serif-light',
+            fontSize: 16, 
+            fontFamily: 'sans-serif',
             fontStyle: 'italic',
-            fontWeight:  '100', 
-            color: '#0007',
-            textShadowOffset: {
-              width: 1,
-              height: 1
-            },
-            textShadowColor: '#000',
-            textShadowRadius: 2,
+            color: '#000a',  
           },
       }
 
@@ -100,7 +93,7 @@ function Form (props){
               </Picker>
             </View>
         </View>
-        <View style={styles.asd}>
+        <View style={styles.pushButton}>
           <PushButton
             txt='Finalizar'
             onPress = {props.handlePress} />
@@ -116,10 +109,10 @@ const styles=StyleSheet.create({
     justifyContent:'space-between',
   },
   subTitle:{
-    fontSize: 24,
+    fontSize: 16,
     textAlign:'left', 
     fontFamily: 'sans-serif',
-    color: '#fff',
+    color: '#000',
     textShadowOffset: {
       width: 1,
       height: 1
@@ -134,9 +127,9 @@ const styles=StyleSheet.create({
     paddingTop: 8,
   },
   address:{
-    height: 52,
+    height: 50,
     paddingLeft: 32,
-    fontSize: 20,
+    fontSize: 18,
     textAlign:'left',
     textAlignVertical: 'center', 
     fontFamily: 'sans-serif',
@@ -151,34 +144,34 @@ const styles=StyleSheet.create({
     marginVertical: 8,
     width:'100%',
     borderWidth: 2,
-    borderColor: '#4c4c4c44',
-    backgroundColor: '#0005',
+    borderColor: '#000',
+    backgroundColor: '#0002',
 
   },
   datePicker:{
-    height: 52,
+    height: 50,
     marginTop: 8,
     marginBottom: 8,
     width:'100%',
     borderWidth: 2,
-    borderColor: '#4c4c4c44',
-    backgroundColor: '#0004'
+    borderColor: '#000',
+    backgroundColor: '#0002'
 
   },
   paymentMethodContainer:{
-    height: 52,
+    height: 50,
     paddingLeft: 32,
     marginVertical: 8,
     justifyContent: 'center',
     width:'100%',
     borderWidth: 2,
-    borderColor: '#4c4c4c44',
-    backgroundColor: '#0004'
+    borderColor: '#000',
+    backgroundColor: '#0002'
   },
   holi:{
-    borderWidth: 3
+    //borderWidth: 3
   },
-  asd:{
+  pushButton:{
     width: '100%',
     height:64,
     alignItems:'flex-end',

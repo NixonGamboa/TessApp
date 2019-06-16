@@ -29,7 +29,7 @@ function Category (props) {
 
 const styles = StyleSheet.create({
 	container:{
-		margin:4,
+		margin:3,
 		borderRadius: 12,
 		overflow: 'hidden',
 		borderColor: '#6664',

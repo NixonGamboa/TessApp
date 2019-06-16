@@ -34,11 +34,8 @@ class RegisterForm extends Component {
   }
   onPaymentMethod = (itemValue) => this.setState({paymentMethod: itemValue})
   handlePress = ()=> {
-    console.log(this.state)
-    alert('Finalizando la compra')
-    console.log('Cambiando a vista final')
-    this.props.navigation.navigate('Finish')
     console.log('Vista final')
+    this.props.navigation.navigate('Finish')
     }
   render(){
     return(

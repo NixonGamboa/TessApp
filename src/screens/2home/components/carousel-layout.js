@@ -11,10 +11,9 @@ function CarouselLayout (props){
 
 const styles =StyleSheet.create({
 	layout:{
-	    backgroundColor: '#fff1',
 	    justifyContent:'center',
 	    alignItems: 'center',
-	    padding: 4
+	    paddingVertical: 8
 	  },
 })
 export default CarouselLayout;

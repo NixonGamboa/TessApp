@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     margin:0,
     borderRadius: 10,
     overflow: 'hidden', 
-    height:350,
+    height:300,
   },
   add:{
     width: '100%',

@@ -13,11 +13,8 @@ class Description extends Component {
 	    }
 	}
 	handlePress = ()=> {
-		console.log(this.state)
-		alert('Agregado al carrito')
-		console.log('Cambiando a vista de carrito')
-		this.props.navigation.navigate('Cart')
 		console.log('Vista de carrito')
+		this.props.navigation.navigate('Cart')
 		}
 	onChangeNote = (text) => this.setState({note:text})
  	render() {

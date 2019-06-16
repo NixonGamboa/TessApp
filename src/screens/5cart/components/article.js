@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
 		textAlign:'justify',
 		fontFamily: 'sans-serif',
 		fontStyle: 'italic', 
-		color: '#fff',
+		color: '#000',
 		fontWeight:'normal',
 		textShadowOffset: {
 			width: 1,
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
 		textAlign:'justify',
 		fontFamily: 'sans-serif',
 		fontStyle: 'italic', 
-		color: '#fff',
+		color: '#000',
 		fontWeight:'normal',
 		textShadowOffset: {
 			width: 1,

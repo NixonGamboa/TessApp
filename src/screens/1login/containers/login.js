@@ -81,7 +81,7 @@ class Login extends Component {
 					<OkBtn 
 						onPress={this.handlePress} />
 					<GoogleSigninButton
-					    style={{ width: 230, height: 48 }}
+					    style={{ width: 240, height: 50 }}
 					    size={GoogleSigninButton.Size.Wide}
 					    color={GoogleSigninButton.Color.Light}
 					    onPress={this.signIn}

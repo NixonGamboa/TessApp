@@ -12,7 +12,7 @@ function InputLayout (props){
 const styles =StyleSheet.create({
 	layout:{
 		flex: 1,
-		justifyContent: 'center',
+		justifyContent: 'flex-end',
 		alignItems: 'center',
 		width: '100%',
 	}	

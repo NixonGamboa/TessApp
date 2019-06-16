@@ -24,11 +24,11 @@ const styles = StyleSheet.create({
 		justifyContent:'flex-end',
 	},
 	txtTitle:{
-		fontSize: 18,
+		fontSize: 16,
 		fontFamily: 'sans-serif',
 		fontStyle: 'italic', 
 		fontWeight:'bold',
-		color: '#fff',
+		color: '#000',
 		textAlign:'right',
 		paddingRight: 32,
 		textShadowOffset: {
@@ -40,14 +40,14 @@ const styles = StyleSheet.create({
 
 	},
 	txt:{
-		height: 30,
+		height: 25,
 		marginHorizontal:8,
 		paddingVertical: 0,
-		fontSize: 16,
+		fontSize: 13,
 		textAlign:'right',
 		fontFamily: 'sans-serif',
 		fontStyle: 'italic', 
-		color: '#fff',
+		color: '#000',
 		fontWeight:'normal',
 		textShadowOffset: {
 			width: 1,

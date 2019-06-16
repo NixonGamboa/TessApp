@@ -20,8 +20,8 @@ const styles =StyleSheet.create({
 		alignItems: 'center', 
 	},
 	imageLogo:{
-		width:280,
-		height:280,
+		width:240,
+		height:240,
 		resizeMode: 'contain',
 	},
 })

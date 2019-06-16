@@ -3,30 +3,31 @@ import {TouchableOpacity, Text, View,StyleSheet} from 'react-native';
 
 function OkBtn (props){
 	return(
-		<View style={styles.layout}>
-			<TouchableOpacity 
-			  	onPress={props.onPress}
-			  	activeOpacity = {0.8}>
+		<TouchableOpacity 
+		  	onPress={props.onPress}
+			activeOpacity = {0.8}>
+				<View style={styles.layout}>
 					<Text style={styles.txtBtn} >OK!</Text>
-			</TouchableOpacity>	
-		</View>
+				</View>
+		</TouchableOpacity>	
 	)
 }
 const styles =StyleSheet.create({
 	layout:{
-		width: 81, 
-		height: 81,
-		borderWidth: 3,
-		borderRadius: 40,
+		width: 240, 
+		height: 40,
+		borderRadius: 7,
 		justifyContent: 'center',
 		alignItems: 'center',
-		borderColor: '#000000',
+		//borderWidth: 3,
+		//borderColor: '#000000',
 		backgroundColor: '#15aebb',
-		marginVertical: 8,
+		marginVertical: 4,
+		marginBottom: 32,
 	},
 	txtBtn:{
 		color:'#fff',
-		fontSize: 32,
+		fontSize: 28,
 		fontStyle: 'normal',
 		fontWeight: 'bold', 
 		fontFamily: 'cursive',

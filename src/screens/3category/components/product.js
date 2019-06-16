@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
 		marginHorizontal: 8,
 		borderRadius: 12,
 		overflow: 'hidden',
-		borderColor: '#6664',
-		borderWidth: 2, 
+		borderColor: '#6666',
+		borderWidth: 1, 
 		height: 220,
 		flex:1,		
 		

@@ -18,10 +18,9 @@ function Add (props){
 
 const styles =StyleSheet.create({
  containerAdd:{
-    height:200,
-    margin:0,
-    borderRadius: 18,
-    overflow: 'hidden', 
+    height:230,
+    //borderRadius: 18,
+    //overflow: 'hidden', 
   },
   add:{
     width: '100%',

@@ -22,11 +22,11 @@ const styles = StyleSheet.create({
 		paddingVertical: 4,
 	},
 	txtTitle:{
-		fontSize: 20,
+		fontSize: 16,
 		textAlign:'left',
 		fontFamily: 'sans-serif',
 		fontStyle: 'italic', 
-		color: '#fff',
+		color: '#000',
 		fontWeight:'bold',
 		textShadowOffset: {
 			width: 1,
@@ -37,11 +37,11 @@ const styles = StyleSheet.create({
 	},
 	txt:{
 		marginHorizontal:8,
-		fontSize: 16,
+		fontSize: 13,
 		textAlign:'justify',
 		fontFamily: 'sans-serif',
 		fontStyle: 'italic', 
-		color: '#fff',
+		color: '#000',
 		fontWeight:'normal',
 		textShadowOffset: {
 			width: 1,

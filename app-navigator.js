@@ -95,23 +95,21 @@ const TabNavigator = createBottomTabNavigator(
         }
 
         // You can return any component that you like here!
-        return <IconComponent name={iconName} size={32} color={tintColor} />;
+        return <IconComponent name={iconName} size={24} color={tintColor} />;
       },
     }),
     initialRouteName:'Home',
-    tabBarPosition: 'top',
     tabBarOptions:{
       activeTintColor:'#7d2181',
-      activeBackgroundColor: '#f3f3f355',
+      //activeBackgroundColor: '#f3f3f355',
       inactiveTintColor:'#4c4c4c',
-      inactiveBackgroundColor: '#f3f3f366',
+      //inactiveBackgroundColor: '#f3f3f366',
       labelStyle: {
-        fontSize: 12,
+        fontSize: 10,
       },
       style: {
         borderTopWidth: 1,
         borderTopColor: '#000',
-        backgroundColor: '#47add4',
       },
     },
   }

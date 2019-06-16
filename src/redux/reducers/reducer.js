@@ -23,6 +23,7 @@ function reducer(state = {}, action){
 		}
 		case 'SET_LOGOUT':{
 			return {...action.payload.state} 
+			//return state = action.payload.state
 		}
 		default:
 			return state;

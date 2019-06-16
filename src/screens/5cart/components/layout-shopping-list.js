@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     textAlign:'left',
     textAlignVertical: 'center', 
     fontFamily: 'sans-serif',
-    color: '#fff',
+    color: '#000',
     textShadowOffset: {
       width: 1,
       height: 1

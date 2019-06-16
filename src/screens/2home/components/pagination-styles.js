@@ -3,8 +3,8 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   dotContainer:{
     position: 'absolute',
-    top: 180,
-    left: 24, 
+    top: 212,
+    left: 14, 
     },
   dot:{
     width: 10,

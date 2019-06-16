@@ -8,7 +8,7 @@ function CelInput (props){
 				style={styles.txtCelular}
 				keyboardType="phone-pad"
 				placeholder="Celular:"
-				placeholderTextColor= "#f5fffa88"
+				placeholderTextColor= "#4c4c4c88"
 				onSubmitEditing={props.onEndCel}
 				onChangeText={props.onChangeCel} >
 					{props.cel}
@@ -18,27 +18,27 @@ function CelInput (props){
 }
 const styles =StyleSheet.create({
 	layout:{
-		width: '70%', 
+		width: 240, 
 		height: 50,
 		marginVertical: 4,
 		justifyContent: 'center',
-		alignItems: 'flex-start',
+		alignItems: 'center',
 	},
 	txtCelular:{
 		color:'#000',
-		fontStyle: 'normal',
-		fontSize: 24,
-		fontWeight: 'bold', 
-		fontFamily: 'cursive',
-		fontWeight:'bold',
+		fontStyle: 'italic',
+		fontSize: 20,
+		fontFamily: 'sans-serif',
+		//fontWeight:'bold',
 		textAlignVertical: 'center',
+		textAlign:'center',
 		width: '100%',
 		paddingLeft: '4%',
 		borderRadius: 7,
-		borderBottomLeftRadius: 20,
-		borderBottomRightRadius: 20,
-		borderWidth: 3,
-		borderBottomWidth: 2,
+		//borderBottomLeftRadius: 20,
+		//borderBottomRightRadius: 20,
+		borderWidth: 2,
+		//borderBottomWidth: 2,
 		borderColor: '#000000',
 	}
 })

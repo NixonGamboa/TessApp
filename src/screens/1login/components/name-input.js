@@ -7,7 +7,7 @@ function NameInput (props){
 			<TextInput
 				style={styles.txtName}
 				placeholder="Nombre:"
-				placeholderTextColor= "#f5fffa88"
+				placeholderTextColor= "#4c4c4c88"
 				autoCapitalize = "words"
 				onChangeText={props.onChangeName} >
 					{props.name}
@@ -17,28 +17,28 @@ function NameInput (props){
 }
 const styles =StyleSheet.create({
 	layout:{
-		width: '70%', 
+		width: 240, 
 		height: 50,
 		marginVertical: 4,
 		justifyContent: 'center',
-		alignItems: 'flex-start',
+		alignItems: 'center',
 	},
 	txtName:{
 		color:'#000',
-		fontStyle: 'normal',
-		fontSize: 24,
-		fontWeight: 'bold', 
-		fontFamily: 'cursive',
-		fontWeight:'bold',
+		fontStyle: 'italic',
+		fontSize: 20,
+		fontFamily: 'sans-serif',
+		//fontWeight:'bold',
 		textAlignVertical: 'center',
+		textAlign:'center',
 		width: '100%',
 		paddingLeft: '4%',
 		borderRadius: 7,
-		borderTopLeftRadius: 20,
-		borderTopRightRadius: 20,
-		borderWidth: 3,
-		borderBottomWidth: 2,
-		borderColor: '#000000',
+		//borderTopLeftRadius: 20,
+		//borderTopRightRadius: 20,
+		borderWidth: 2,
+		//borderBottomWidth: 2,
+		borderColor: '#000',
 	}
 })
 export default NameInput;

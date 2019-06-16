@@ -18,7 +18,7 @@ function Form (props){
               source={require('../../../../assets/icons/facebook.png')} />
             <Image style={styles.icon}
               source={require('../../../../assets/icons/instagram.png')} />
-            <Text style={styles.txt}>@TessApp</Text>
+            <Text style={styles.txt}>@Detallitos</Text>
           </View>
         </View>
 
@@ -47,10 +47,10 @@ const styles=StyleSheet.create({
     paddingLeft: 8,
   },
   txt:{
-    fontSize: 24,
+    fontSize: 18,
     fontFamily: 'sans-serif',
     fontStyle: 'italic', 
-    color: '#fff',
+    color: '#000',
     textAlign:'left', 
     textShadowOffset: {
       width: 1,
@@ -72,14 +72,14 @@ const styles=StyleSheet.create({
     alignItems: 'center',
   },
   icon:{
-    height: 56,
-    width: 56,
+    height: 50,
+    width: 50,
     margin:8,
     resizeMode: 'contain',
   },
   buttonContainer:{
     width: '100%',
-    height:64,
+    height:40,
     alignItems:'flex-end',
     justifyContent: 'center',
   },
