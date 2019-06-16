@@ -10,16 +10,19 @@ function reducer(state = {}, action){
 			return {...state, selectedCategory:action.payload.category}
 		}
 		case 'SET_USERNAME':{
-			return {...state, userName:action.payload.userName }
+			return {...state, user:{...state.user, userName:action.payload.userName} }
 		}
 		case 'SET_USERCEL':{
-			return {...state, userCel:action.payload.userCel }
+			return {...state, user:{...state.user, userCel:action.payload.userCel} }
 		}
 		case 'SET_ACTIVEUSER':{
-			return {...state, userActive:action.payload.userActive }
+			return {...state, user:{...state.user, userActive:action.payload.userActive} }
+		}
+		case 'SET_USERGOOGLE':{
+			return {...state, user:action.payload.user }
 		}
 		case 'SET_LOGOUT':{
-			return state = action.payload.state
+			return {...action.payload.state} 
 		}
 		default:
 			return state;

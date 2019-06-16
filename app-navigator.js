@@ -10,7 +10,7 @@ import Cart from './src/screens/5cart/shopping-view';
 import RegisterForm from './src/screens/6Form/register-form-view';
 import Finish from './src/screens/7Finish/finish-view';
 import Login from './src/screens/1login/login-view';
-import LoadLogin from './src/screens/Loading/loading-login';
+import Verifying from './src/screens/Loading/verifying';
 
 const AppNavigator = createStackNavigator(
   { Login,
@@ -121,7 +121,7 @@ const SwitchNavigator = createSwitchNavigator(
   {
     App:TabNavigator,
     Login:Login,
-    Verify:LoadLogin,
+    Verify:Verifying,
   },
   {
     initialRouteName:'Verify',

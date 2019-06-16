@@ -5,3 +5,8 @@ Google signin
 https://github.com/react-native-community/react-native-google-signin
 
 
+error de clave sh1 en signin solucionado extrayendo la clave de androidstdio
+https://github.com/googlesamples/google-services/issues/360
+
+
+{...state, user:{...state.user, userName:action.payload}}

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {GoogleSigninButton } from 'react-native-google-signin';
 
 import Logo from '../components/logo';
 import Layout from '../components/layout';
@@ -8,40 +9,20 @@ import CelInput from '../components/cel-input';
 import OkBtn from '../components/ok-btn';
 import moment from "moment";
 
-import logi from '../../../firebase/google-signin';
+import googleLogin from '../../../firebase/google-signin';
 
 function mapStateToProps(state){
 	console.log(state)
 	return{
-		name:state.userName,
-		cel:state.userCel,
+		name:state.user.userName,
+		cel:state.user.userCel,
 	}
 	console.log(state)
 }
 
 class Login extends Component {
+	componentDidMount(){
 	
-	handlePress = ()=> {
-		if (this.props.name === '' ){
-			alert('Por favor ingrese un nombre valido')
-		}
-		else if (this.props.cel.length !== 10){
-			alert('Por favor ingrese un numero de celular valido')
-		}
-		else{
-			console.log('valido')
-			logi()
-			//AQUI ES DONDE SE PUEDE HACER UN LLAMADO FETCH AL API PARA VALIDAR
-			this.props.dispatch({
-				type:'SET_ACTIVEUSER',
-				payload:{
-					userActive:true,
-				}
-			})
-			this.props.navigation.navigate('Home')
-			console.log('Home')
-		}
-
 	}
 	onChangeName = (text) => {
 		this.props.dispatch({
@@ -59,6 +40,33 @@ class Login extends Component {
 			}
 		})
 	}
+	handlePress = ()=> {
+		if (this.props.name === '' ){
+			alert('Por favor ingrese un nombre valido')
+		}
+		else if (this.props.cel.length !== 10){
+			alert('Por favor ingrese un numero de celular valido')
+		}
+		else{
+			console.log('valido')
+			//AQUI ES DONDE SE PUEDE HACER UN LLAMADO FETCH AL API PARA VALIDAR
+			this.props.dispatch({
+				type:'SET_ACTIVEUSER',
+				payload:{
+					userActive:true,
+				}
+			})
+			this.props.navigation.navigate('Home')
+			console.log('Home')
+		}
+
+	}
+	signIn = () => {
+		console.log('iniciando signIn')
+		googleLogin()
+		this.props.navigation.navigate('Verify')
+		
+	}
 	render(){
 		return(
 			<Layout>
@@ -72,6 +80,12 @@ class Login extends Component {
 						cel={this.props.cel} />
 					<OkBtn 
 						onPress={this.handlePress} />
+					<GoogleSigninButton
+					    style={{ width: 230, height: 48 }}
+					    size={GoogleSigninButton.Size.Wide}
+					    color={GoogleSigninButton.Color.Light}
+					    onPress={this.signIn}
+					    disabled={false} />
 				</Layout>
 			</Layout>
 		)

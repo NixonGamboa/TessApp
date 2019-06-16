@@ -26,7 +26,7 @@ class Home extends Component {
           }
         })
       }
-    static navigationOptions = ({ navigation }) => {
+  static navigationOptions = ({ navigation }) => {
     return {
         //title: navigation.getParam('name')
     	title:'TessApp',

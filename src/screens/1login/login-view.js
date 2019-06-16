@@ -8,6 +8,11 @@ class LoginView extends Component {
     super(props);
     this.cel = React.createRef();
 	}
+	static navigationOptions = ({ navigation }) => {
+	    return {
+	        header: null,
+	    	}
+	}
 	render(){
 		return(
 			<Layout>
