@@ -23,7 +23,9 @@ class CarouselAds extends Component {
       activeSlide :0,
     };
   }
-  keyExtractor = item => item.id.toString()
+  componentDidMount(){
+    console.log(this.props.list)
+  }
   _renderItem ({item}) {
       return (
         <Add {...item} />
@@ -36,7 +38,6 @@ class CarouselAds extends Component {
         <Carousel
           ref={(c) => { this._carousel = c; }}
           data={this.props.list}
-          keyExtractor = {this.keyExtractor}
           renderItem={this._renderItem}
           onSnapToItem={(index) => this.setState({ activeSlide: index }) }
           sliderWidth={Dimensions.get('window').width}
@@ -48,7 +49,7 @@ class CarouselAds extends Component {
           autoplayInterval={5000}
           inactiveSlideScale={0.98} />
         <Pagination
-          dotsLength={this.props.list.length}
+          dotsLength={6}
           activeDotIndex={this.state.activeSlide}
           containerStyle={styles.dotContainer}
           dotStyle={styles.dot}

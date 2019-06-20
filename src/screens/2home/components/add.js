@@ -2,14 +2,14 @@ import React  from 'react';
 import {View,ImageBackground, StyleSheet, Text} from 'react-native';
 
 function Add (props){
-	return(
+  return(
 		<View style={styles.containerAdd} >
             <ImageBackground 
-              source = {{uri:props.background_image}}
+              source = {{uri:props.url}}
               style = {styles.add} >
                <View style={styles.txtContainer} >
-                  <Text style={styles.txtTitle} >{ props.year}</Text>
-                  <Text style={styles.txtSubtitle} >{ props.title }</Text>
+                  <Text style={styles.txtTitle} >{ props.title}</Text>
+                  <Text style={styles.txtSubtitle} >{/* props.title */}</Text>
                 </View>
             </ImageBackground>
          </View>	
