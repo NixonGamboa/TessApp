@@ -17,11 +17,11 @@ class App extends Component {
     return (
       <Provider
         store ={store} >
-            <AppNavigator />
-        {/*<PersistGate
+        <PersistGate
           loading={<Load/>}
           persistor={persistor} >
-        </PersistGate>*/}
+            <AppNavigator />
+        </PersistGate>
       </Provider>
     );
   }

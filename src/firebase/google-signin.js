@@ -39,13 +39,7 @@ async function googleLogin() {
   }
 }
 
-// import statusCodes along with GoogleSignin
-
-// Somewhere in your code
 
 
-/*function log(){
-  console.log('Holi')
-}*/
 
 export default googleLogin;

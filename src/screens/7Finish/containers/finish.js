@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import firebase from 'react-native-firebase';
+import { GoogleSignin } from 'react-native-google-signin';
+
 
 
 import TahnkYou from '../components/thank-you';
@@ -16,22 +18,28 @@ function mapStateToProps(state){
 
 const thankText="Tu apoyo nos hace cada dia mejores personas, esperamos que tu confianza aumente con cada uno de nuestros servicios. Te contactaremos para confirmar tú pedido."
 class Finish extends Component {
-    signOutUser = async () => {
-        try {
-            await firebase.auth().signOut();
-        } catch (e) {
-            console.log(e);
-        }
+  signOutFirebase = async () => {
+    try {
+      await firebase.auth().signOut();
+    } catch (e) {
+        console.log(e);
     }
+  }
+
+  //// Configurando signout de Google signin,
+  //borrando credenciales y revocando permisos de la app
+  signOut = async () => {
+    try {
+      await GoogleSignin.revokeAccess();
+      await GoogleSignin.signOut();
+    } catch (error) {
+      console.error(error);
+    }
+  }
   handlePress = ()=> {
-    this.props.dispatch({
-      type:'SET_LOGOUT',
-      payload:{
-        state : stateInit,
-      }
-    })
-    
-    this.signOutUser()
+    this.signOut()
+    this.signOutFirebase()
+
     this.props.navigation.navigate('Verify'); 
     console.log(this.props.state)
     

@@ -15,7 +15,6 @@ function mapStateToProps(state){
 }
 
 class Categories extends Component {
-	keyExtractor = item => item.id.toString()
 	handlePress = (item) => {
 		console.log('Cambiando a vista de categoria')
 		this.props.navigation.navigate('Category',{
@@ -43,7 +42,6 @@ class Categories extends Component {
 			>
 				<FlatList
 				 	data={this.props.list}
-				 	keyExtractor = {this.keyExtractor}
 				 	numColumns={2}
 				 	renderItem={this.renderItem}
 				 	scrollEnabled={true}

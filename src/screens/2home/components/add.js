@@ -9,7 +9,7 @@ function Add (props){
               style = {styles.add} >
                <View style={styles.txtContainer} >
                   <Text style={styles.txtTitle} >{ props.title}</Text>
-                  <Text style={styles.txtSubtitle} >{/* props.title */}</Text>
+                  <Text style={styles.txtSubtitle} >{ props.subtitle }</Text>
                 </View>
             </ImageBackground>
          </View>	
