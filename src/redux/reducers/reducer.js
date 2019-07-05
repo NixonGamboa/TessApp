@@ -6,6 +6,9 @@ function reducer(state = {}, action){
 		case 'SET_CATEGORY_LIST':{
 			return{...state, ...action.payload}
 		}
+		case 'SET_PRODUCT_LIST':{
+			return{...state, ...action.payload}
+		}
 		case 'SET_SELECTED_CATEGORY':{
 			return {...state, selectedCategory:action.payload.category}
 		}
