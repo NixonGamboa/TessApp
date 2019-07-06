@@ -16,15 +16,16 @@ function mapStateToProps(state){
 
 class Categories extends Component {
 	handlePress = (item) => {
-		console.log('Cambiando a vista de categoria')
-		this.props.navigation.navigate('Category',{
-			title:'Categorias' })
 		this.props.dispatch({
 			type:'SET_SELECTED_CATEGORY',
 			payload:{
-				category:item,
+				category:item.title,
+				nameList:item.nombreLista,
 			}
 		})
+		console.log('Cambiando a vista de categoria')
+		this.props.navigation.navigate('Category',{
+			title:item.title })
 	}
 	renderItem = ({item}) => {
 		return(

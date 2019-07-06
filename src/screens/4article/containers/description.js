@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 import { View, Text} from 'react-native';
+import {connect} from 'react-redux';
+
 import Layout from '../components/description-layout';
 import DetailFormat from '../components/description-format';
 import AddNote from '../components/add-note-format';
 import ILikeBtn from '../components/i-like-it-button';
+
+function mapStateToProps(state){
+	console.log(state)
+	  return {
+	    article:state.article
+	}
+}
 
 class Description extends Component {
 	constructor(props) {
@@ -12,7 +21,13 @@ class Description extends Component {
 	    	note:'', 
 	    }
 	}
-	handlePress = ()=> {
+	handlePress = (article)=> {
+		this.props.dispatch({
+			type:'ADD_TO_CART',
+			payload:{
+				pr:article,
+			}
+		})
 		console.log('Vista de carrito')
 		this.props.navigation.navigate('Cart')
 		}
@@ -21,14 +36,14 @@ class Description extends Component {
     	return (
     		<Layout>
 	      		<DetailFormat
-	      		 	detail= {this.props.detail}/>
+	      		 	detail= {this.props.article.description}/>
 	      		<AddNote
 	      			onChangeNote= {this.onChangeNote} />
 	      		<ILikeBtn
-	      			onPress={this.handlePress}/>
+	      			onPress={()=>{this.handlePress(this.props.article)}}/>
       		</Layout>
     	);
   	}
 }
 
-export default Description;
+export default connect(mapStateToProps)(Description);

@@ -16,7 +16,7 @@ function Product (props) {
 			activeOpacity={0.7} >
 				<ImageBackground
 					style = {styles.category}
-					source = {props.dir}
+					source = {{uri:props.photos.ph1.dir}}
 					>
 						<View style={styles.textContainer} >
 							<Text style={styles.textTitle} > {props.title} </Text>

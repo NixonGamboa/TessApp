@@ -7,7 +7,7 @@ function Photo (props) {
     return (
       	<View style={styles.containerAdd} >
             <ImageBackground 
-              source = { props.dir }
+              source = {{uri: props.dir }}
               style = {styles.add} >
                	{/*<View style={styles.txtContainer} >
                   	<Text style={styles.txtTitle} >{ props.title }</Text>

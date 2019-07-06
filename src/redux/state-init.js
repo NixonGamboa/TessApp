@@ -6,5 +6,7 @@ const stateInit = {
 	},
 	ads:[],
 	categories:[],
+	products:[],
+	cart:[],
 }
 export default  stateInit;

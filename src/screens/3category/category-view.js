@@ -6,6 +6,12 @@ import {connect} from 'react-redux';
 import Layout from '../../sections/layout-view'
 import ProductsList from './containers/products-list';
 
+function mapStateToProps(state){
+	console.log(state)
+	  return {
+	    sCat:state.selectedCategory
+	  }
+	}
 
 class VistaCat extends Component {
 	static navigationOptions = ({ navigation }) => {
@@ -13,13 +19,14 @@ class VistaCat extends Component {
         title: navigation.getParam('title')
     	}
 	}
+
 	async componentDidMount(lista){
 	  
 	    var database = firebase.database()
 	    
-	    database.ref('Lista_1').once('value',(data)=>{
-	    const adsList = data.toJSON();
-	    const list = Object.values(adsList)
+	    database.ref(this.props.sCat.nameList).once('value',(data)=>{
+	    const productList = data.toJSON();
+	    const list = Object.values(productList)
 	    this.props.dispatch({
 	      type:'SET_PRODUCT_LIST',
 	      payload:{ products:list }
@@ -38,4 +45,4 @@ class VistaCat extends Component {
 			);
 	}
 }
-export default connect(null)(VistaCat);
+export default connect(mapStateToProps)(VistaCat);

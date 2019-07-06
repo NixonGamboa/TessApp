@@ -19,6 +19,7 @@ function DescriptionFormat (props) {
 const styles = StyleSheet.create({
 	container:{
 		flex:3,
+		width: '100%',
 		paddingVertical: 4,
 	},
 	txtTitle:{

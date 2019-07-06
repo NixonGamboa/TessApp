@@ -1,14 +1,27 @@
 import React,{Component} from 'react';
 import {Dimensions } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
+import {connect} from 'react-redux';
+
 import ListLayout from '../components/list-layout';
 import Photo from '../components/photo';
+
+function mapStateToProps(state){
+  console.log(state)
+  const photo = state.article.photos
+  const photos = Object.values(photo).reverse()
+  console.log('mostrando fotos')
+  console.log(photos)
+  return {
+      photos,
+  }
+}
 
 class PhotoList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeSlide :(this.props.list.length)-1,
+      activeSlide :(this.props.photos.length)-1,
       };
     }
   renderItem = ({item}) => {
@@ -20,7 +33,7 @@ class PhotoList extends Component {
         <ListLayout >
           <Carousel
               ref={(c) => { this._carousel = c; }}
-              data={this.props.list}
+              data={this.props.photos}
               renderItem={this.renderItem}
               onSnapToItem={(index) => this.setState({ activeSlide: index }) }
               sliderWidth={(Dimensions.get('window').width)-8}
@@ -38,4 +51,4 @@ class PhotoList extends Component {
         </ListLayout>
     );}
   }
-export default PhotoList;
+export default connect(mapStateToProps)(PhotoList);
