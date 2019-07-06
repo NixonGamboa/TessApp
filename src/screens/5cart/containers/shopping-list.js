@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 import {FlatList} from 'react-native';
+import {connect} from 'react-redux';
+
 import Layout from '../components/layout-shopping-list';
 import Empty from '../components/empty';
 import Separator from '../components/separator';
 import Article from '../components/article';
 import Buttons from '../components/buttons';
+
+function mapStateToProps(state){
+  console.log(state)
+  return {
+      cart:state.cart,
+  }
+}
 
 class ShoppingList extends Component {
 	renderEmpty = () => <Empty text = "No hay articulos" />
@@ -28,7 +37,7 @@ class ShoppingList extends Component {
 			<Layout
 			title = "Algun subtitulo para el carrito" >
 				<FlatList
-					data= {this.props.list}
+					data= {this.props.cart}
 					ListEmptyComponent={this.renderEmpty}
 					ItemSeparatorComponent = {this.itemSeparator}
 					renderItem={this.renderItem}
@@ -40,4 +49,4 @@ class ShoppingList extends Component {
 	)}
 }
 
-export default ShoppingList;
+export default connect(mapStateToProps)(ShoppingList);

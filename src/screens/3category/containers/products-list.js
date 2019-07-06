@@ -15,7 +15,7 @@ function mapStateToProps(state){
 
 class Products extends Component {
 	componentDidMount(){
-		console.log(this.props.list[0].photos.ph1.key)
+		
 	}
 	
 	handlePress = (item) => {

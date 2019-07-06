@@ -10,8 +10,6 @@ function mapStateToProps(state){
   console.log(state)
   const photo = state.article.photos
   const photos = Object.values(photo).reverse()
-  console.log('mostrando fotos')
-  console.log(photos)
   return {
       photos,
   }

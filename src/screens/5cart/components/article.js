@@ -7,7 +7,7 @@ function Article (props) {
 			<View style = {styles.left} >
 				<ImageBackground
 					style = {styles.photo}
-					source = {props.ph1}
+					source = {{uri:props.photos.ph1.dir}}
 					/>		
 				<View style = {styles.titleContain} >
 					<Text style = {styles.titleTxt} >{props.title}</Text>
@@ -15,7 +15,7 @@ function Article (props) {
 			</View>
 
 			<View style = {styles.right} >
-				<Text style= {styles.detailTxt} >Descripcion: {props.detail} </Text>
+				<Text style= {styles.detailTxt} >Descripcion: {props.description} </Text>
 				<Text style= {styles.addNoteTxt} >Notas Adicionales: {props.addNote} </Text>
 				<Text style= {styles.priceTxt} >$ {props.price}.</Text>
 			</View>
