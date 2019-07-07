@@ -17,7 +17,7 @@ function Article (props) {
 
 			<View style = {styles.right} >
 				<Text style= {styles.detailTxt} >Descripcion: {props.description} </Text>
-				<Text style= {styles.addNoteTxt} >Notas Adicionales: {props.addNote} </Text>
+				<Text style= {styles.addNoteTxt} >Notas Adicionales: {props.note} </Text>
 				<Text style= {styles.priceTxt} >$ {props.price}.</Text>
 				<TouchableOpacity
 					style={styles.iconRemove}

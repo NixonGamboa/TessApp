@@ -21,6 +21,9 @@ function reducer(state = stateInit, action){
 		case 'SET_SELECTED_PRODUCT':{
 			return{...state, ...action.payload}
 		}
+		case 'ADD_NOTE_TO_PRODUCT':{
+			return{...state, article:{...state.article, ...action.payload}}
+		}
 		case 'ADD_TO_CART':{
 			return{...state, cart:[...state.cart, action.payload.pr]}
 			//M={...M, N:[...M.N, {a:15}]}

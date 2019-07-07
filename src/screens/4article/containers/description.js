@@ -31,7 +31,14 @@ class Description extends Component {
 		console.log('Vista de carrito')
 		this.props.navigation.navigate('Cart')
 		}
-	onChangeNote = (text) => this.setState({note:text})
+	onChangeNote = (text) => {
+		this.props.dispatch({
+			type:'ADD_NOTE_TO_PRODUCT',
+			payload:{
+				note:text,
+			}
+		})
+	}
  	render() {
     	return (
     		<Layout>
