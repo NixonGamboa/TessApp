@@ -18,9 +18,20 @@ function mapStateToProps(state){
 class ShoppingList extends Component {
 	renderEmpty = () => <Empty text = "No hay articulos" />
 	itemSeparator = () => <Separator />
+	handlePress = (item) => {
+		this.props.dispatch({
+			type:'REMOVE_TO_CART',
+			payload:{
+				id:item.key,
+			}
+		})
+	}
 	renderItem = ({item})=> {
 		return (
-			<Article {...item} />
+			<Article 
+				{...item}
+				onPress={()=>{this.handlePress(item)}}
+				/>
 			)}
 	onPressContinue = () => {
 		console.log('pasando a vista de formulario')

@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, ImageBackground, Text, StyleSheet,}from 'react-native';
+import {View, ImageBackground, Text, StyleSheet,TouchableOpacity}from 'react-native';
+import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 function Article (props) {
 	return (
@@ -18,6 +19,13 @@ function Article (props) {
 				<Text style= {styles.detailTxt} >Descripcion: {props.description} </Text>
 				<Text style= {styles.addNoteTxt} >Notas Adicionales: {props.addNote} </Text>
 				<Text style= {styles.priceTxt} >$ {props.price}.</Text>
+				<TouchableOpacity
+					style={styles.iconRemove}
+					onPress={props.onPress}
+					activeOpacity = {0.8}
+					>
+					<Icons  name={'close-circle-outline'} size={24} color={'#000'} />
+				</TouchableOpacity>
 			</View>
 		</View>
 
@@ -65,12 +73,8 @@ const styles = StyleSheet.create({
 		fontStyle: 'italic', 
 		color: '#000',
 		fontWeight:'normal',
-		textShadowOffset: {
-			width: 1,
-			height: 1
-		},
-		textShadowColor: '#000',
-		textShadowRadius: 8,
+		paddingTop: 4,
+		
 	},
 	addNoteTxt:{
 		fontSize: 12,
@@ -100,6 +104,13 @@ const styles = StyleSheet.create({
 		},
 		textShadowColor: '#fff7',
 		textShadowRadius: 3
+	},
+	iconRemove:{
+		position:'absolute',
+		right:0,
+		top:0,
+		paddingVertical:5,
+		paddingHorizontal:8,
 	}
 
 })

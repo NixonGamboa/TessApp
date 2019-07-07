@@ -14,14 +14,14 @@ function Category (props) {
 			<TouchableOpacity
 			   	onPress={props.onPress}
 				activeOpacity = {0.8}>
-			<ImageBackground
-				style = {styles.category}
-				source = {{uri:props.url}}
-			>
-			<View style={styles.textContainer} >
-				<Text style={styles.text} > {props.title} </Text>
-			</View>
-			</ImageBackground>
+				<ImageBackground
+					style = {styles.category}
+					source = {{uri:props.url}}
+				>
+					<View style={styles.textContainer} >
+						<Text style={styles.text} > {props.title} </Text>
+					</View>
+				</ImageBackground>
 			</TouchableOpacity>
 		</View>
 	)
