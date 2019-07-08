@@ -63,7 +63,9 @@ class Login extends Component {
 	}
 	signIn = () => {
 		console.log('iniciando signIn')
-		googleLogin()
+		var us =  googleLogin()
+		console.log('Afuera')
+		console.log(us)
 		this.props.navigation.navigate('Verify')
 		
 	}

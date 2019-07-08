@@ -8,5 +8,12 @@ const stateInit = {
 	categories:[],
 	products:[],
 	cart:[],
+	dataForSend:{
+		address: '',
+		celular: '',
+		date: '',
+		paymentMethod: '',
+		time: '',
+	},
 }
 export default  stateInit;

@@ -48,13 +48,24 @@ function Form (props){
         <View style={styles.inputsContainer}>
           <TextInput 
             style={styles.address}
+            placeholder='Celular:'
+            placeholderTextColor='#0008'
+            keyboardType='phone-pad'
+            returnKeyType='next'
+            onChangeText={props.onCelChange}  >
+                {props.celular}
+              </TextInput>
+          <TextInput 
+            style={styles.address}
             placeholder='Dirección:'
             placeholderTextColor='#0008'
             //autoFocus={true}
             //blurOnSubmit={true}
             keyboardType='default'
             returnKeyType='next'
-            onChangeText={props.onAddressChange} />
+            onChangeText={props.onAddressChange} >
+                {props.address}
+              </TextInput>
             <DatePicker
               style={styles.datePicker}
               date={props.date}
