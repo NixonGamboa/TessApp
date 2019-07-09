@@ -42,7 +42,10 @@ class Finish extends Component {
 
     this.props.dispatch({
           type:'LOG_OUT',
-          payload: stateInit,
+          payload: {...stateInit,
+            ads:this.props.state.ads,
+            categories:this.props.state.categories,
+          },
         })
     this.props.navigation.navigate('Verify'); 
     console.log(this.props.state)
