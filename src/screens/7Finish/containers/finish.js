@@ -30,15 +30,15 @@ class Finish extends Component {
   //borrando credenciales y revocando permisos de la app
   signOut = async () => {
     try {
-      await GoogleSignin.revokeAccess();
+      await GoogleSignin.revokeAccess(); //para eliminar permisos de la aplicacion
       await GoogleSignin.signOut();
     } catch (error) {
       console.error(error);
     }
   }
   handlePress = ()=> {
-    this.signOut()
     this.signOutFirebase()
+    this.signOut()
 
     this.props.navigation.navigate('Verify'); 
     console.log(this.props.state)
