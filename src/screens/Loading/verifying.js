@@ -23,6 +23,13 @@ class Log extends Component {
 		  	} else {
 		    // Signed out
 		    	console.log('no autenticado')
+		    	this.props.dispatch({
+					type:'SET_USERGOOGLE',
+					payload:{
+						user:{},
+					}
+				})
+
 				this.props.navigation.navigate('Login');
 
 		  	}

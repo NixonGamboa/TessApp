@@ -15,6 +15,7 @@ import firebaseConfig from '../../firebase/firebase-config';
 
 class Home extends Component {
   async componentDidMount(lista){
+    console.log('Componente Home montado')
   
     firebase.initializeApp(firebaseConfig)
     var database = firebase.database()

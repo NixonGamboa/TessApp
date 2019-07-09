@@ -86,16 +86,7 @@ class RegisterForm extends Component {
       
       var uid =this.props.uid
       var name =this.props.name
-      /*
-      firebase.database().ref('Lista_Usuarios/'+ email+'/lastBuy').once('value',(data)=>{
-      var lastBuy = data.toJSON();
-      console.log(lastBuy)
-      }).catch((error)=>{
-        console.log(error);
-      })
-
-      var buy = 8
-      var newBuy = buy.toString()*/
+     
       firebase.database().ref('Lista_Usuarios/'+name+uid).push().set(
           {
               datos:this.props.data,
@@ -104,6 +95,19 @@ class RegisterForm extends Component {
       ).then(()=>{
           console.log('INSERTED!');
           console.log('Vista final')
+          this.props.dispatch({
+            type:'CLEAR_CART',
+          })
+          this.props.dispatch({
+            type:'CLEAR_DATA_FOR_SEND',
+            payload:{
+              address: '',
+              celular: '',
+              date: '',
+              paymentMethod: '',
+              time: '',
+            }
+          })
           this.props.navigation.navigate('Finish')
       }).catch((error)=>{
           console.log(error);

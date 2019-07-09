@@ -12,6 +12,7 @@ function mapStateToProps(state){
   console.log(state)
   return {
       cart:state.cart,
+      userActive:state.user.emailVerified,
   }
 }
 
@@ -34,24 +35,31 @@ class ShoppingList extends Component {
 				/>
 			)}
 	onPressContinue = () => {
-		if (this.props.cart.length > 0){
-			console.log('pasando a vista de formulario')
-			this.props.navigation.navigate('RegisterForm')
-			console.log('formulario')
+		if(this.props.userActive === true){
+			if (this.props.cart.length > 0){
+				console.log('pasando a vista de formulario')
+				this.props.navigation.navigate('RegisterForm')
+				console.log('formulario')
+			}else{
+				Alert.alert(
+					'CARRITO VACIO',
+					'Por favor agregue elementos al carrito',
+					[
+						{text: 'Cancel', onPress: () => console.log('Cancel Pressed'), },
+					    {text: 'OK', onPress: () => this.props.navigation.navigate('Home')}
+					],
+				);
+			}
 		}else{
 			Alert.alert(
-				'CARRITO VACIO',
-				'Por favor agregue elementos al carrito',
-				[
-					{text: 'Cancel', onPress: () => console.log('Cancel Pressed'), },
-				    {text: 'OK', onPress: () => this.props.navigation.navigate('Home')}
-				],
+					'INICIA SESION',
+					'Hubo un problema al verificar tu correo, por favor accede con google',
+					[
+						{text: 'OK', onPress: () => this.props.navigation.navigate('Login')}
+					],
 				);
-			
-
 		}
-
-		} 
+	} 
 	onPressAddMore = () => {
 		console.log('regresando a la Home')
 		this.props.navigation.navigate('Home')

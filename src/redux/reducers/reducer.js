@@ -32,10 +32,15 @@ function reducer(state = stateInit, action){
 			return{...state, cart:removeItemFromCart( state.cart, action.payload.id )}
 			//M={...M, N:removeItemFromCart( M.N, itemToDelete.id )}
 		}
-
-		//AQUI!!
+		case 'CLEAR_CART':{
+			return{...state, cart:[]}
+			//M={...M, N:[...M.N, {a:15}]}
+		}
 		case 'DATA_FOR_SEND':{
 			return{...state, dataForSend:{...state.dataForSend, ...action.payload }}
+		}
+		case 'CLEAR_DATA_FOR_SEND':{
+			return{...state, dataForSend:{ ...action.payload }}
 		}
 		case 'SET_USERNAME':{
 			return {...state, user:{...state.user, userName:action.payload.userName} }
@@ -49,8 +54,8 @@ function reducer(state = stateInit, action){
 		case 'SET_USERGOOGLE':{
 			return {...state, user:action.payload.user }
 		}
-		case 'SET_LOGOUT':{
-			return {...action.payload.state} 
+		case 'LOG_OUT':{
+			return {...action.payload} 
 			//return state = action.payload.state
 		}
 		default:

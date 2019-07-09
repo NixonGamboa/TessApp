@@ -1,9 +1,5 @@
 const stateInit = {
-	user:{
-		userName:'',
-		userCel:'',
-		userActive:false,
-	},
+	user:{},
 	ads:[],
 	categories:[],
 	products:[],

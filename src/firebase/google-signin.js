@@ -19,21 +19,6 @@ async function googleLogin() {
     const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken, userInfo.accessToken)
     // login with credential
     const firebaseUserCredential = await firebase.auth().signInWithCredential(credential)
-    console.log('es primera vez?')
-    var email= 'prueba3'
-    var newUser= firebaseUserCredential.additionalUserInfo.isNewUser
-    /*if (newUser == true){
-      console.log(firebaseUserCredential.additionalUserInfo.isNewUser)
-      firebase.database().ref('Lista_Usuarios/'+ email).set(
-          {
-              newBuy:0,
-          }
-      ).then(()=>{
-          console.log('nuevo usuario sin pedidos!');
-      }).catch((error)=>{
-          console.log(error);
-      });
-    }*/
     
     //console.warn(JSON.stringify(firebaseUserCredential.user.toJSON()));
   }catch (error) {
