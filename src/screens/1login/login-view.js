@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 
-import Layout from '../../sections/layout-view';
 import Login from './containers/login'
 
 class LoginView extends Component {
@@ -15,10 +14,8 @@ class LoginView extends Component {
 	}
 	render(){
 		return(
-			<Layout>
-				<Login
+			<Login
 					navigation={this.props.navigation}/>
-			</Layout>
 		)
 	}
 }

@@ -1,7 +1,6 @@
 import React from 'react';
-import {View, Text, ActivityIndicator, StyleSheet} from 'react-native';
-import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Icon from 'react-native-vector-icons/Entypo';
+import {View, Text, ActivityIndicator, StyleSheet, Image, ImageBackground} from 'react-native';
+
 
 
 
@@ -9,9 +8,15 @@ import Icon from 'react-native-vector-icons/Entypo';
 function LoadingInit (props) {
 	return (
 		<View style={styles.container}>
-			<Icons style={styles.icon} name={'home-city'} size={150} color={'#7d2181'} />
-			<Text style={styles.txt} >DETALLITOS!</Text>
-      <ActivityIndicator size={50} color={'#7d2181'}  />
+    <ImageBackground 
+      source={require('../../assets/diseno/load.jpg')}
+      style ={styles.background} >
+        <Image
+          style={styles.image}
+          source={require('../../assets/diseno/loader.png')}
+        />
+        <ActivityIndicator size={56} color={'#fff'}  />
+      </ImageBackground>
 		</View>
 	)
 }
@@ -20,22 +25,20 @@ const styles = StyleSheet.create({
   	flex:1,
   	justifyContent: 'center',
   	alignItems: 'center',
-  	backgroundColor: '#fff',
   },
-  icon:{
-  	margin:8,
+  background:{
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  txt:{
-    height: 40,
-    color:'#7d2181',
-    fontSize: 28,
-    fontStyle: 'normal',
-    fontWeight: 'bold', 
-    fontFamily: 'cursive',
-    textAlignVertical: 'center',
-    textAlign: 'center',
-    marginBottom: 32,  
-  }
+  image:{
+    width:'90%',
+    height: '56%',
+    //borderWidth: 2,
+    //borderColor: 'red',
+    resizeMode: 'contain',
+  },
 });
 
 export default LoadingInit;

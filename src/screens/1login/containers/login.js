@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {GoogleSigninButton } from 'react-native-google-signin';
+import moment from "moment";
 
 import Logo from '../components/logo';
-import Layout from '../components/layout';
-import moment from "moment";
+import Layout from '../components/layout-view';
+
+//import Layout from '../components/layout';
+import SkipButton from '../components/skip-button';
+import GButton from '../components/google-button';
 
 import googleLogin from '../../../firebase/google-signin';
 
@@ -21,27 +25,27 @@ class Login extends Component {
 	componentDidMount(){
 	
 	}
+	onSkip = () => {
+		console.log('Skip Login')
+		this.props.navigation.navigate('App');
+		//por poner al estado redux usuario no activo
+		
+	}
 	signIn = () => {
 		console.log('iniciando signIn')
-		var us =  googleLogin()
-		console.log('Afuera')
-		console.log(us)
+		googleLogin()
 		this.props.navigation.navigate('Verify')
 		
 	}
 	render(){
 		return(
 			<Layout>
-				<Logo/>
-				<Layout> 
-					
-					<GoogleSigninButton
-					    style={{ width: 240, height: 50 }}
-					    size={GoogleSigninButton.Size.Wide}
-					    color={GoogleSigninButton.Color.Light}
-					    onPress={this.signIn}
-					    disabled={false} />
-				</Layout>
+				<Logo>
+					<SkipButton
+					   	onSkip={this.onSkip} />
+					<GButton
+					   	onPress={this.signIn} />
+				</Logo>
 			</Layout>
 		)
 	}

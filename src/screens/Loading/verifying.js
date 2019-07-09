@@ -9,6 +9,7 @@ class Log extends Component {
 	componentDidMount(){
 		firebase.auth().onAuthStateChanged((user) => {
 	  		console.log(user)
+	  		//por poner al estado redux usuario actiuvo o no activo
 	  		if (user) {
 		    // Signed in
 		    	console.log('autenticado')

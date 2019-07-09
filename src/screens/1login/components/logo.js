@@ -6,7 +6,8 @@ function Logo (props){
 		<View style={styles.logo} >
 			<Image
 				style={styles.imageLogo}
-				source = {require('../../../../assets/images/logo5.png')} />
+				source = {require('../../../../assets/diseno/fondo2.jpg')} />
+				{props.children}
 		</View>
 	)
 }
@@ -14,15 +15,17 @@ function Logo (props){
 const styles =StyleSheet.create({
 	logo:{
 		flex: 1,
-		margin:10,
-		padding:0,
-		justifyContent: 'flex-start',
+		width:'100%',
+		height:'100%',
+		justifyContent: 'center',
+		//borderWidth: 3,
 		alignItems: 'center', 
 	},
 	imageLogo:{
-		width:240,
-		height:240,
+		width:'90%',
+		height: '65%',
 		resizeMode: 'contain',
+		marginBottom: 100,
 	},
 })
 export default Logo;
