@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {FlatList, TouchableOpacity, View, Text} from 'react-native';
+import {FlatList, TouchableOpacity, View, Text, ActivityIndicator} from 'react-native';
 
 import {connect} from 'react-redux';
 
@@ -43,6 +43,7 @@ class Categories extends Component {
 			>
 				<FlatList
 				 	data={this.props.list}
+				 	ListEmptyComponent={<ActivityIndicator size={32} color={'#green'}  />}
 				 	numColumns={2}
 				 	renderItem={this.renderItem}
 				 	scrollEnabled={true}

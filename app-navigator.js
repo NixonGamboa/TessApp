@@ -13,8 +13,7 @@ import Login from './src/screens/1login/login-view';
 import Verifying from './src/screens/Loading/verifying';
 
 const AppNavigator = createStackNavigator(
-  { Login,
-    Home,
+  { Home,
     Category,
     Article,
     Cart,

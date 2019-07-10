@@ -6,6 +6,15 @@ import Load from '../../sections/loading';
 
 
 class Log extends Component {
+	sleep = () => {
+			var milliseconds = 3000;
+			var start = new Date().getTime();
+			for (var i = 0; i < 1e7; i++) {
+			if ((new Date().getTime() - start) > milliseconds) {
+			   	break;
+		  	}
+		}
+	}
 	componentDidMount(){
 		firebase.auth().onAuthStateChanged((user) => {
 	  		console.log(user)
@@ -31,16 +40,10 @@ class Log extends Component {
 				})
 
 				this.props.navigation.navigate('Login');
+				this.sleep
 
 		  	}
 		});
-	  	
-  		//usando redux en la actualizacin V2.0
-		/*if(this.props.user){
-			this.props.navigation.navigate('App');
-		}else{
-			this.props.navigation.navigate('Login');
-		}*/
 	}
   	render() {
     	return (

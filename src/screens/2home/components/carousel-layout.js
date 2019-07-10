@@ -11,7 +11,8 @@ function CarouselLayout (props){
 
 const styles =StyleSheet.create({
 	layout:{
-	    justifyContent:'center',
+		height:250,
+        justifyContent:'center',
 	    alignItems: 'center',
 	    paddingVertical: 8
 	  },

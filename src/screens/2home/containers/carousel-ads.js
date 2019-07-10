@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Dimensions} from 'react-native';
+import {Dimensions, ActivityIndicator} from 'react-native';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 
 import {connect} from 'react-redux';
@@ -38,6 +38,7 @@ class CarouselAds extends Component {
         <Carousel
           ref={(c) => { this._carousel = c; }}
           data={this.props.list}
+          loop={true}
           renderItem={this._renderItem}
           onSnapToItem={(index) => this.setState({ activeSlide: index }) }
           sliderWidth={Dimensions.get('window').width}

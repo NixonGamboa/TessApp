@@ -52,10 +52,12 @@ class ShoppingList extends Component {
 			}
 		}else{
 			Alert.alert(
-					'INICIA SESION',
-					'Hubo un problema al verificar tu correo, por favor accede con google',
+					'REGISTRATE',
+					'Por favor accede con google para continuar con tu compra',
 					[
-						{text: 'OK', onPress: () => this.props.navigation.navigate('Login')}
+						{text: 'Cancelar', onPress: () => console.log('Cancel Pressed'), },
+						{text: 'OK', onPress: () => this.props.navigation.navigate('Login')},
+					    
 					],
 				);
 		}
