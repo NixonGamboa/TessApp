@@ -6,7 +6,7 @@ function Logo (props){
 		<View style={styles.logo} >
 			<Image
 				style={styles.imageLogo}
-				source = {require('../../../../assets/diseno/fondo2.jpg')} />
+				source = {require('../../../../assets/diseno/logo-login.png')} />
 				{props.children}
 		</View>
 	)

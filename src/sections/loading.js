@@ -8,16 +8,12 @@ import {View, Text, ActivityIndicator, StyleSheet, Image, ImageBackground} from 
 function LoadingInit (props) {
 	return (
 		<View style={styles.container}>
-    <ImageBackground 
-      source={require('../../assets/diseno/load.jpg')}
-      style ={styles.background} >
         <Image
           style={styles.image}
           source={require('../../assets/diseno/loader.png')}
         />
         <ActivityIndicator size={56} color={'#fff'}  />
-      </ImageBackground>
-		</View>
+    </View>
 	)
 }
 const styles = StyleSheet.create({
@@ -25,12 +21,7 @@ const styles = StyleSheet.create({
   	flex:1,
   	justifyContent: 'center',
   	alignItems: 'center',
-  },
-  background:{
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: '#362779',
   },
   image:{
     width:'90%',
