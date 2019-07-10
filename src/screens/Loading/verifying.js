@@ -6,11 +6,10 @@ import Load from '../../sections/loading';
 
 
 class Log extends Component {
-	sleep = () => {
-			var milliseconds = 3000;
+	sleep = (ms) => {
 			var start = new Date().getTime();
 			for (var i = 0; i < 1e7; i++) {
-			if ((new Date().getTime() - start) > milliseconds) {
+			if ((new Date().getTime() - start) > ms) {
 			   	break;
 		  	}
 		}
@@ -28,6 +27,7 @@ class Log extends Component {
 						user:user._user,
 					}
 				})
+				this.sleep(1000)
 		    	this.props.navigation.navigate('App');
 		  	} else {
 		    // Signed out
@@ -39,7 +39,7 @@ class Log extends Component {
 					}
 				})
 
-				this.sleep()
+				this.sleep(2000)
 				this.props.navigation.navigate('Login');
 
 		  	}
