@@ -39,8 +39,8 @@ class Log extends Component {
 					}
 				})
 
+				this.sleep()
 				this.props.navigation.navigate('Login');
-				this.sleep
 
 		  	}
 		});
