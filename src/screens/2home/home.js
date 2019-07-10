@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
-import firebase from 'firebase';
+import firebase from 'react-native-firebase';
 
 
 import Categories from './containers/categories-list';
@@ -17,7 +17,6 @@ class Home extends Component {
   async componentDidMount(lista){
     console.log('Componente Home montado')
   
-    firebase.initializeApp(firebaseConfig)
     var database = firebase.database()
     
     database.ref('Lista_Anuncios').once('value',(data)=>{

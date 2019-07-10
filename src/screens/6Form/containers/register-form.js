@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import moment from "moment";
 import {connect} from 'react-redux';
-import firebase from 'firebase';
+import firebase from 'react-native-firebase';
 
 
 import Form from '../components/form';

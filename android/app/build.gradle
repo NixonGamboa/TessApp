@@ -167,6 +167,8 @@ dependencies {
     implementation "com.google.firebase:firebase-invites:17.0.0"
     //para signin de google
     implementation "com.google.android.gms:play-services-auth:16.0.1"
+    //para base de datos firebase
+    implementation "com.google.firebase:firebase-database:17.0.0"
 
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-gesture-handler')
