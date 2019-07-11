@@ -43,7 +43,7 @@ class Categories extends Component {
 			>
 				<FlatList
 				 	data={this.props.list}
-				 	ListEmptyComponent={<ActivityIndicator size={32} color={'#green'}  />}
+				 	ListEmptyComponent={<ActivityIndicator size={32} color={'#362779'}  />}
 				 	numColumns={2}
 				 	renderItem={this.renderItem}
 				 	scrollEnabled={true}

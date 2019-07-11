@@ -4,31 +4,25 @@ import { Header } from 'react-navigation';
 
 function LayoutView (props){
   return(
-    <View style = {styles.superContainer} >
+    <SafeAreaView style={styles.superContainer} >
       <ImageBackground 
-        source={require('../../assets/diseno/layout.jpeg')}
-        style ={styles.background} >
-          <View style={styles.container} >
-            {props.children}
-          </View>
+      source={require('../../assets/diseno/layout.jpeg')}
+      style ={styles.background} >
+        {props.children}
       </ImageBackground>
-    </View>  
+    </SafeAreaView>
   )
 }
 const styles=StyleSheet.create({
   superContainer:{
     flex:1,
-    width: '100%',
-    height: '100%',
   },
   background:{
+    paddingTop: StatusBar.currentHeight,
     width: '100%',
     height: '100%',
   },
-  container:{
-    flex:1,
-    height: Dimensions.get('window').height-Header.HEIGHT-StatusBar.currentHeight,
-  },
+  
 })
 
 export default LayoutView;

@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {FlatList, View, Text} from 'react-native';
+import {FlatList, ActivityIndicator, View, Text} from 'react-native';
 import {connect} from 'react-redux';
 
 import Product from '../components/product';
@@ -50,6 +50,7 @@ class Products extends Component {
 				<FlatList
 				 	data={this.props.list}
 				 	numColumns={2}
+				 	ListEmptyComponent={<ActivityIndicator size={32} color={'#362779'}  />}
 				 	renderItem={this.renderItem}
 				 	scrollEnabled={true}
 				 	nestedScrollEnabled={true}

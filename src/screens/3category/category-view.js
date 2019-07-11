@@ -19,15 +19,15 @@ class VistaCat extends Component {
     return {
         title: navigation.getParam('title'),
         headerStyle: {
-	      backgroundColor: '#362779',
+	      backgroundColor: '#21183d',
 	    },
 	    headerTintColor: '#fff',
 	    headerTitleStyle: {
-	    	fontSize: 16,
+	    	fontSize: 28,
 			textAlign:'left',
-			fontFamily: 'serif',
-			fontStyle: 'italic', 
-			color: '#000',
+			fontFamily: 'cursive',
+			//fontStyle: 'italic', 
+			color: '#fff',
 	      	fontWeight: 'bold',
 	    },
 	}
@@ -35,7 +35,8 @@ class VistaCat extends Component {
 	componentWillMount(){
 		this.focus = this.props.navigation.addListener('didFocus',()=> {
 			StatusBar.setBarStyle('light-content')
-			StatusBar.setBackgroundColor('#362779')
+			StatusBar.setBackgroundColor('#00000033')
+      		StatusBar.setTranslucent(true)
 		});
 		console.log('categoria willmount')
 		this.props.dispatch({

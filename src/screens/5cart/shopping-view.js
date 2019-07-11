@@ -16,7 +16,8 @@ class ShoppingView extends Component {
     componentWillMount(){
 		this.focus = this.props.navigation.addListener('didFocus',()=> {
 			StatusBar.setBarStyle('light-content')
-			StatusBar.setBackgroundColor('#362779')
+			StatusBar.setBackgroundColor('#00000033')
+      		StatusBar.setTranslucent(true)
 		});
 	}
 	componentWillUnmount(){

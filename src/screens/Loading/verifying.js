@@ -24,7 +24,8 @@ class Log extends Component {
 		this.focus = this.props.navigation.addListener('didFocus',()=> {
 			console.log('did Focus Verify')
 			StatusBar.setBarStyle('light-content')
-			StatusBar.setBackgroundColor('#362779')
+			StatusBar.setBackgroundColor('transparent')
+      		StatusBar.setTranslucent(true)
 		});
 		
 		firebase.auth().onAuthStateChanged((user) => {

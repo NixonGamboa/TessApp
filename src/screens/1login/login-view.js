@@ -4,10 +4,7 @@ import {StatusBar} from 'react-native';
 import Login from './containers/login'
 
 class LoginView extends Component {
-	 constructor(props) {
-    super(props);
-    this.cel = React.createRef();
-	}
+	
 	static navigationOptions = ({ navigation }) => {
 	    return {
 	        header: null,
@@ -16,7 +13,8 @@ class LoginView extends Component {
 	componentWillMount(){
 		this.focus = this.props.navigation.addListener('didFocus',()=> {
 			StatusBar.setBarStyle('light-content')
-			StatusBar.setBackgroundColor('#362779')
+			StatusBar.setBackgroundColor('#00000033')
+			StatusBar.setTranslucent(true)
 		});
 	}
 	componentWillUnmount(){

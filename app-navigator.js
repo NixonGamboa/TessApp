@@ -115,10 +115,23 @@ const TabNavigator = createBottomTabNavigator(
     },
   }
 )
+import Layout from './src/sections/general-layout';
+
+const PruebaContainer = createAppContainer(TabNavigator);
+
+class Prueba extends Component {
+  render() {
+    return (
+      <Layout>
+        <PruebaContainer/>
+      </Layout>
+    );
+  }
+}
 
 const SwitchNavigator = createSwitchNavigator(
   {
-    App:TabNavigator,
+    App:Prueba,
     Login:Login,
     Verify:Verifying,
   },
