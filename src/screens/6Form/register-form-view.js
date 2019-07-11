@@ -8,7 +8,17 @@ import Form from './containers/register-form';
 class RegisterView extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
-        title: 'Un ultimo paso...'
+      title: 'Un ultimo paso...',
+      headerStyle: {
+        backgroundColor: '#362779',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontSize: 28,
+      fontFamily: 'cursive',
+      color: '#fff',
+          //fontWeight: 'bold',
+      },
       }
   }
   componentWillMount(){

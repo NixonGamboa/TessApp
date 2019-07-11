@@ -8,7 +8,17 @@ import Finish from './containers/finish';
 class FinishView extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
-        title: 'Gracias por tu compra.'
+      title: 'Pedido Finalizado.',
+      headerStyle: {
+        backgroundColor: '#362779',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontSize: 28,
+      fontFamily: 'cursive',
+      color: '#fff',
+          //fontWeight: 'bold',
+      },
       }
   }
   componentWillMount(){

@@ -8,7 +8,17 @@ import Description from './containers/description';
 class ProductView extends Component {
 	static navigationOptions = ({ navigation }) => {
     return {
-        title: navigation.getParam('title')
+        title: navigation.getParam('title'),
+        headerStyle: {
+	      backgroundColor: '#362779',
+	    },
+	    headerTintColor: '#fff',
+	    headerTitleStyle: {
+	    	fontSize: 28,
+			fontFamily: 'cursive',
+			color: '#fff',
+	      	//fontWeight: 'bold',
+	    },
         
       }
   	}

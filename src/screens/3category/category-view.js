@@ -19,16 +19,14 @@ class VistaCat extends Component {
     return {
         title: navigation.getParam('title'),
         headerStyle: {
-	      backgroundColor: '#21183d',
+	      backgroundColor: '#362779',
 	    },
 	    headerTintColor: '#fff',
 	    headerTitleStyle: {
 	    	fontSize: 28,
-			textAlign:'left',
 			fontFamily: 'cursive',
-			//fontStyle: 'italic', 
 			color: '#fff',
-	      	fontWeight: 'bold',
+	      	//fontWeight: 'bold',
 	    },
 	}
 	}

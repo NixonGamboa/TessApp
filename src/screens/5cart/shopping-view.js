@@ -10,7 +10,17 @@ class ShoppingView extends Component {
 	
     static navigationOptions = ({ navigation }) => {
     return {
-        title: 'CARRITO'
+        title: 'Carrito',
+        headerStyle: {
+	      backgroundColor: '#362779',
+	    },
+	    headerTintColor: '#fff',
+	    headerTitleStyle: {
+	    	fontSize: 28,
+			fontFamily: 'cursive',
+			color: '#fff',
+	      	//fontWeight: 'bold',
+	    },
       }
     }
     componentWillMount(){
