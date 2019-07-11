@@ -16,17 +16,18 @@ function Article (props) {
 			</View>
 
 			<View style = {styles.right} >
-				<Text style= {styles.detailTxt} >Descripcion: {props.description} </Text>
-				<Text style= {styles.addNoteTxt} >Notas Adicionales: {props.note} </Text>
+				<Text style= {styles.detailTxt} >{props.description} </Text>
+				<Text style= {styles.addNoteTxt} >{props.note} </Text>
 				<Text style= {styles.priceTxt} >$ {props.price}.</Text>
-				<TouchableOpacity
-					style={styles.iconRemove}
-					onPress={props.onPress}
-					activeOpacity = {0.8}
-					>
-					<Icons  name={'close-circle-outline'} size={24} color={'#000'} />
-				</TouchableOpacity>
 			</View>
+			
+			<TouchableOpacity
+				style={styles.iconRemove}
+				onPress={props.onPress}
+				activeOpacity = {0.8}
+				>
+				<Icons  name={'close-circle-outline'} size={24} color={'#000'} />
+			</TouchableOpacity>
 		</View>
 
 		)
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
 	container:{
 		flexDirection:'row',
 		flex:1,
-		padding: 8,
+		paddingVertical: 8,
 
 	},
 	left:{
@@ -57,6 +58,8 @@ const styles = StyleSheet.create({
 		paddingHorizontal:8,
 	},
 	titleTxt:{
+		fontFamily: 'serif',
+		fontStyle: 'italic',
 		color:'white',
 		fontSize:11,
 	},
@@ -72,7 +75,6 @@ const styles = StyleSheet.create({
 		fontFamily: 'sans-serif',
 		fontStyle: 'italic', 
 		color: '#000',
-		fontWeight:'normal',
 		paddingTop: 4,
 		
 	},
@@ -82,13 +84,7 @@ const styles = StyleSheet.create({
 		fontFamily: 'sans-serif',
 		fontStyle: 'italic', 
 		color: '#000',
-		fontWeight:'normal',
-		textShadowOffset: {
-			width: 1,
-			height: 1
-		},
-		textShadowColor: '#000',
-		textShadowRadius: 8,
+		
 	},
 	priceTxt:{
 		fontSize: 20,
@@ -98,19 +94,12 @@ const styles = StyleSheet.create({
 		marginRight: 16,
 		color: '#4c4c4c',
 		fontWeight:'bold',
-		textShadowOffset: {
-			width: 1,
-			height: 1
-		},
-		textShadowColor: '#fff7',
-		textShadowRadius: 3
 	},
 	iconRemove:{
 		position:'absolute',
 		right:0,
 		top:0,
 		paddingVertical:5,
-		paddingHorizontal:8,
 	}
 
 })

@@ -16,13 +16,16 @@ class Log extends Component {
 		}
 	}
 	componentWillMount(){
-		this.props.navigation.addListener('didFocus',()=> {
-			console.log('did Focus')
+	}
+	componentWillUnmount(){
+		this.focus.remove();
+	}
+	async componentDidMount(){
+		this.focus = this.props.navigation.addListener('didFocus',()=> {
+			console.log('did Focus Verify')
 			StatusBar.setBarStyle('light-content')
 			StatusBar.setBackgroundColor('#362779')
 		});
-	}
-	componentDidMount(){
 		
 		firebase.auth().onAuthStateChanged((user) => {
 	  		console.log(user)

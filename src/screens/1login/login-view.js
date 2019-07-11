@@ -14,11 +14,13 @@ class LoginView extends Component {
 	    	}
 	}
 	componentWillMount(){
-		this.props.navigation.addListener('didFocus',()=> {
-			console.log('did Focus')
+		this.focus = this.props.navigation.addListener('didFocus',()=> {
 			StatusBar.setBarStyle('light-content')
 			StatusBar.setBackgroundColor('#362779')
 		});
+	}
+	componentWillUnmount(){
+		this.focus.remove();
 	}
 	render(){
 		return(

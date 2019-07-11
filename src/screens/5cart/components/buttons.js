@@ -19,7 +19,7 @@ const styles=StyleSheet.create({
 
 buttonContainer:{
     width: '100%',
-    height:40,
+    height:36,
     flexDirection:'row',
     justifyContent:'space-between',
     alignItems:'center',

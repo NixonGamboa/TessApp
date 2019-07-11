@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, ImageBackground, ScrollView, KeyboardAvoidingView, View, StyleSheet, Dimensions} from 'react-native';
+import {SafeAreaView, ImageBackground, ScrollView, KeyboardAvoidingView, View, StyleSheet, Dimensions,StatusBar} from 'react-native';
 import { Header } from 'react-navigation';
 
 function LayoutView (props){
@@ -34,14 +34,13 @@ const styles=StyleSheet.create({
     height: '100%',
   },
   containerColor:{
-    //backgroundColor: 'white',
-    paddingTop: 16,
+    //paddingTop: 16,
     width: '100%',
     height: '100%',
   },
   container:{
     flex:1,
-    height: Dimensions.get('window').height-Header.HEIGHT-18,
+    height: Dimensions.get('window').height-Header.HEIGHT-StatusBar.currentHeight,
   },
 })
 

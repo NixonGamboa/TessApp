@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {StatusBar} from 'react-native';
 
 import Layout from '../../sections/layout-view'
 import Form from './containers/register-form';
@@ -9,6 +10,15 @@ class RegisterView extends Component {
     return {
         title: 'Un ultimo paso...'
       }
+  }
+  componentWillMount(){
+    this.focus = this.props.navigation.addListener('didFocus',()=> {
+      StatusBar.setBarStyle('light-content')
+      StatusBar.setBackgroundColor('#362779')
+    });
+  }
+  componentWillUnmount(){
+    this.focus.remove();
   }
   render(){
     return(

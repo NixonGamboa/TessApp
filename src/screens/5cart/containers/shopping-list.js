@@ -70,7 +70,7 @@ class ShoppingList extends Component {
 	render() {
 		return (
 			<Layout
-			title = "Algun subtitulo para el carrito" >
+			title = "Tus productos:" >
 				<FlatList
 					data= {this.props.cart}
 					ListEmptyComponent={this.renderEmpty}

@@ -7,7 +7,7 @@ function DescriptionFormat (props) {
     return (
       	<View style={styles.container}>
       		<Text style={styles.txtTitle}>
-      		   Descripcion:
+      		   Descripción:
       		</Text>
 	      	<Text style={styles.txt}>
 	        	{props.detail}
@@ -23,33 +23,24 @@ const styles = StyleSheet.create({
 		paddingVertical: 4,
 	},
 	txtTitle:{
+		marginHorizontal:8,
 		fontSize: 16,
 		textAlign:'left',
-		fontFamily: 'sans-serif',
+		fontFamily: 'serif',
 		fontStyle: 'italic', 
 		color: '#000',
 		fontWeight:'bold',
-		textShadowOffset: {
-			width: 1,
-			height: 1
-		},
-		textShadowColor: '#000',
-		textShadowRadius: 8,
 	},
 	txt:{
 		marginHorizontal:8,
+		marginTop: 4,
 		fontSize: 13,
 		textAlign:'justify',
 		fontFamily: 'sans-serif',
 		fontStyle: 'italic', 
 		color: '#000',
 		fontWeight:'normal',
-		textShadowOffset: {
-			width: 1,
-			height: 1
-		},
-		textShadowColor: '#000',
-		textShadowRadius: 8,
+		
 	},
 });
 

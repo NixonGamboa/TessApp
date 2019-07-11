@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {StatusBar} from 'react-native';
 
 import Layout from '../../sections/layout-view';
 import ShoppingList from './containers/shopping-list';
@@ -9,9 +10,18 @@ class ShoppingView extends Component {
 	
     static navigationOptions = ({ navigation }) => {
     return {
-        title: 'Tu Carrito'
+        title: 'CARRITO'
       }
     }
+    componentWillMount(){
+		this.focus = this.props.navigation.addListener('didFocus',()=> {
+			StatusBar.setBarStyle('light-content')
+			StatusBar.setBackgroundColor('#362779')
+		});
+	}
+	componentWillUnmount(){
+		this.focus.remove();
+	}
 	render(){
 		return(
 			<Layout>

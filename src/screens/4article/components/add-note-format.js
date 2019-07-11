@@ -25,18 +25,13 @@ const styles = StyleSheet.create({
 	},
 	txtTitle:{
 		fontSize: 16,
-		fontFamily: 'sans-serif',
+		fontFamily: 'serif',
 		fontStyle: 'italic', 
 		fontWeight:'bold',
 		color: '#000',
 		textAlign:'right',
 		paddingRight: 32,
-		textShadowOffset: {
-			width: 1,
-			height: 1
-		},
-		textShadowColor: '#000',
-		textShadowRadius: 8,
+		
 
 	},
 	txt:{
@@ -49,13 +44,7 @@ const styles = StyleSheet.create({
 		fontStyle: 'italic', 
 		color: '#000',
 		fontWeight:'normal',
-		textShadowOffset: {
-			width: 1,
-			height: 1
-		},
-		textShadowColor: '#000',
-		textShadowRadius: 8,
-		borderBottomColor: '#4c4c4c',
+		borderBottomColor: '#362779',
 		borderBottomWidth: 2,
 	},
 });

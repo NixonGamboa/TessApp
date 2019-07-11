@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {StatusBar} from 'react-native';
 
 import Layout from '../../sections/layout-view'
 import Profile from './containers/about';
@@ -9,6 +10,15 @@ class ProfileView extends Component {
     return {
         title: 'Detallitos App.'
       }
+  }
+  componentWillMount(){
+    this.focus = this.props.navigation.addListener('didFocus',()=> {
+      StatusBar.setBarStyle('light-content')
+      StatusBar.setBackgroundColor('#362779')
+    });
+  }
+  componentWillUnmount(){
+    this.focus.remove();
   }
   render(){
     return(

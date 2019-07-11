@@ -8,7 +8,7 @@ function ILikeButton (props) {
     return (
       <View style={styles.container} >
       	<PushButton
-        txt='Lo Quiero!'
+        txt='¡Lo Quiero!'
         onPress = {props.onPress} />
       </View>
     )}

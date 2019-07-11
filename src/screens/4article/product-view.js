@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {StyleSheet } from 'react-native';
+import {StatusBar} from 'react-native';
 
 import Layout from '../../sections/layout-view';
 import PhotoList from './containers/photo-list';
@@ -11,7 +11,16 @@ class ProductView extends Component {
         title: navigation.getParam('title')
         
       }
-  }
+  	}
+  	componentWillMount(){
+		this.focus = this.props.navigation.addListener('didFocus',()=> {
+			StatusBar.setBarStyle('light-content')
+			StatusBar.setBackgroundColor('#362779')
+		});
+	}
+	componentWillUnmount(){
+		this.focus.remove();
+	}
 
 	render(){
 		return(

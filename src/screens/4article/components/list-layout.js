@@ -13,10 +13,10 @@ function ListLayout (props) {
 
 const styles = StyleSheet.create({
 	totalContainer:{
-	    backgroundColor: '#4c4c4c22', 
-	    borderColor: '#4c4c4c1f',
-	    borderTopWidth: 2,
-	    borderBottomWidth: 2,
+	    //backgroundColor: '#4c4c4c22', 
+	    //borderColor: '#4c4c4c1f',
+	    //borderTopWidth: 2,
+	    //borderBottomWidth: 2,
 	    justifyContent:'center',
 	    alignItems: 'center',
 	    paddingLeft: 8,

@@ -23,17 +23,12 @@ const styles = StyleSheet.create({
 		flex:1,
 	},
 	txtTitle:{
-		fontSize: 16,
+		fontSize: 14,
     textAlign:'center',
     textAlignVertical: 'center', 
-    fontFamily: 'sans-serif',
+    fontFamily: 'serif',
+    fontStyle: 'italic', 
     color: '#000',
-    textShadowOffset: {
-      width: 1,
-      height: 1
-    },
-    textShadowColor: '#000',
-    textShadowRadius: 2,
   }
 })
 

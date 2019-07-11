@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {StatusBar} from 'react-native';
 import {connect} from 'react-redux';
 import firebase from 'react-native-firebase';
 
@@ -14,6 +15,15 @@ import firebaseConfig from '../../firebase/firebase-config';
 
 
 class Home extends Component {
+  componentWillMount(){
+    this.focus = this.props.navigation.addListener('didFocus',()=> {
+      StatusBar.setBarStyle('light-content')
+      StatusBar.setBackgroundColor('#362779')
+    });
+  }
+  componentWillUnmount(){
+    this.focus.remove();
+  }
   async componentDidMount(lista){
     console.log('Componente Home montado')
   

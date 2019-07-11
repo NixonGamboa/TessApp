@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {StatusBar} from 'react-native';
 import firebase from 'react-native-firebase';
 import {connect} from 'react-redux';
 
@@ -16,8 +17,29 @@ function mapStateToProps(state){
 class VistaCat extends Component {
 	static navigationOptions = ({ navigation }) => {
     return {
-        title: navigation.getParam('title')
-    	}
+        title: navigation.getParam('title'),
+        headerStyle: {
+	      backgroundColor: '#362779',
+	    },
+	    headerTintColor: '#fff',
+	    headerTitleStyle: {
+	    	fontSize: 16,
+			textAlign:'left',
+			fontFamily: 'serif',
+			fontStyle: 'italic', 
+			color: '#000',
+	      	fontWeight: 'bold',
+	    },
+	}
+	}
+	componentWillMount(){
+		this.focus = this.props.navigation.addListener('didFocus',()=> {
+			StatusBar.setBarStyle('light-content')
+			StatusBar.setBackgroundColor('#362779')
+		});
+	}
+	componentWillUnmount(){
+		this.focus.remove();
 	}
 
 	async componentDidMount(lista){

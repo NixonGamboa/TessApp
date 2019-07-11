@@ -23,22 +23,15 @@ const styles=StyleSheet.create({
     width: 140,
     marginRight: 8,
     borderRadius: 16,
-    backgroundColor: '#15aebb',
+    backgroundColor: '#362779',
   },
   buttonTxt:{
-    fontSize: 20,
-    fontFamily: 'sans-serif',
+    fontSize: 18,
+    fontFamily: 'serif',
     fontStyle: 'italic', 
-    fontWeight:'bold',
     color: '#fff',
     textAlign: 'center' ,
     textAlignVertical:'center',
-    textShadowOffset: {
-      width: 2,
-      height: 2
-    },
-    textShadowColor: '#000',
-    textShadowRadius: 3,
   },
 })
 

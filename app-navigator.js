@@ -28,6 +28,7 @@ const AppNavigator = createStackNavigator(
       headerBackTitle:"Atras", //solo para iOS
       gesturesEnabled:true,
       },
+
     headerMode:'screen',
     cardStyle:{ backgroundColor: '#47add4'},
     headerLayoutPreset:'center',
@@ -100,7 +101,7 @@ const TabNavigator = createBottomTabNavigator(
     }),
     initialRouteName:'Home',
     tabBarOptions:{
-      activeTintColor:'#7d2181',
+      activeTintColor:'#362779',
       //activeBackgroundColor: '#f3f3f355',
       inactiveTintColor:'#4c4c4c',
       //inactiveBackgroundColor: '#f3f3f366',
