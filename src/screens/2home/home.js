@@ -26,9 +26,8 @@ class Home extends Component {
   }
   async componentDidMount(lista){
     console.log('Componente Home montado')
-  
-    var database = firebase.database()
     
+    var database = firebase.database()
     database.ref('Lista_Anuncios').once('value',(data)=>{
     const adsList = data.toJSON();
     const list = Object.values(adsList)

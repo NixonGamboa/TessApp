@@ -37,13 +37,19 @@ class VistaCat extends Component {
 			StatusBar.setBarStyle('light-content')
 			StatusBar.setBackgroundColor('#362779')
 		});
+		console.log('categoria willmount')
+		this.props.dispatch({
+        type:'SET_PRODUCT_LIST',
+        payload:{ products:[] }
+        })
 	}
 	componentWillUnmount(){
 		this.focus.remove();
 	}
 
 	async componentDidMount(lista){
-	  
+		console.log('categoria didmount')
+	  	
 	    var database = firebase.database()
 	    
 	    database.ref(this.props.sCat.nameList).once('value',(data)=>{

@@ -98,8 +98,8 @@ function Form (props){
                mode={'dialog'} >
                  <Picker.Item label="Selecciona un metodo de pago" value="" />
                  <Picker.Item label="Efectivo" value="cash" />
-                 <Picker.Item label="Tarjeta Credito" value="credit_card" />
-                 <Picker.Item label="Nequi" value="nequi" />
+                 <Picker.Item label="Transferencia Bancaria" value="bancary_transference" />
+                 <Picker.Item label="Efecty" value="efecty" />
                  <Picker.Item label="Daviplata" value="daviplata" />
               </Picker>
             </View>
