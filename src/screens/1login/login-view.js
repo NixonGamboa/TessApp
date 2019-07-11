@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {StatusBar} from 'react-native';
 
 import Login from './containers/login'
 
@@ -11,6 +12,13 @@ class LoginView extends Component {
 	    return {
 	        header: null,
 	    	}
+	}
+	componentWillMount(){
+		this.props.navigation.addListener('didFocus',()=> {
+			console.log('did Focus')
+			StatusBar.setBarStyle('light-content')
+			StatusBar.setBackgroundColor('#362779')
+		});
 	}
 	render(){
 		return(

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {StatusBar} from 'react-native';
 import {connect} from 'react-redux';
 import firebase from 'react-native-firebase';
 
@@ -14,7 +15,15 @@ class Log extends Component {
 		  	}
 		}
 	}
+	componentWillMount(){
+		this.props.navigation.addListener('didFocus',()=> {
+			console.log('did Focus')
+			StatusBar.setBarStyle('light-content')
+			StatusBar.setBackgroundColor('#362779')
+		});
+	}
 	componentDidMount(){
+		
 		firebase.auth().onAuthStateChanged((user) => {
 	  		console.log(user)
 	  		//por poner al estado redux usuario actiuvo o no activo
