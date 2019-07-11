@@ -11,6 +11,7 @@ import RegisterForm from './src/screens/6Form/register-form-view';
 import Finish from './src/screens/7Finish/finish-view';
 import Login from './src/screens/1login/login-view';
 import Verifying from './src/screens/Loading/verifying';
+import About from './src/screens/About/about-view';
 
 const AppNavigator = createStackNavigator(
   { Home,
@@ -70,7 +71,7 @@ const TabNavigator = createBottomTabNavigator(
       },
     },
     About:{
-      screen: Finish,
+      screen: About,
       navigationOptions:{
         title:'Nosotros',
         //tabBarIcon: <Icons name={'trophy'} size={25}  /> ,
@@ -94,7 +95,7 @@ const TabNavigator = createBottomTabNavigator(
         }
 
         // You can return any component that you like here!
-        return <IconComponent name={iconName} size={24} color={tintColor} />;
+        return <IconComponent name={iconName} size={24} color={'#362779'} />;
       },
     }),
     initialRouteName:'Home',

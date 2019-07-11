@@ -11,7 +11,6 @@ function GButton (props){
           <Image
             source={require('../../../../assets/diseno/skip.png')}
             style ={styles.background} />
-          
       </TouchableOpacity>
           
     )}
