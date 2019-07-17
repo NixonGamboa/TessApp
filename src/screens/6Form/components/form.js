@@ -26,12 +26,6 @@ const customStyles={
             fontFamily: 'sans-serif',
             fontStyle: 'italic', 
             color: '#000',
-            textShadowOffset: {
-              width: 1,
-              height: 1
-            },
-            textShadowColor: '#000',
-            textShadowRadius: 2,
           },
         placeholderText:{
             fontSize: 16, 
@@ -120,16 +114,11 @@ const styles=StyleSheet.create({
     justifyContent:'space-between',
   },
   subTitle:{
-    fontSize: 16,
+    fontSize: 18,
     textAlign:'left', 
-    fontFamily: 'sans-serif',
+    fontFamily: 'serif',
+    fontStyle: 'italic', 
     color: '#000',
-    textShadowOffset: {
-      width: 1,
-      height: 1
-    },
-    textShadowColor: '#000',
-    textShadowRadius: 2,
     marginTop: 8,
     marginBottom: 8,
   },
@@ -143,20 +132,15 @@ const styles=StyleSheet.create({
     fontSize: 18,
     textAlign:'left',
     textAlignVertical: 'center', 
-    fontFamily: 'sans-serif',
+    fontFamily: 'serif',
     fontStyle: 'italic', 
-    color: '#fff',
-    textShadowOffset: {
-      width: 1,
-      height: 1
-    },
-    textShadowColor: '#000',
-    textShadowRadius: 2,
+    color: '#000',
     marginVertical: 8,
     width:'100%',
-    borderWidth: 2,
-    borderColor: '#000',
-    backgroundColor: '#0002',
+    borderBottomWidth: 2,
+    borderRadius: 8,
+    borderColor: '#362779',
+    backgroundColor: '#0001',
 
   },
   datePicker:{
@@ -164,9 +148,10 @@ const styles=StyleSheet.create({
     marginTop: 8,
     marginBottom: 8,
     width:'100%',
-    borderWidth: 2,
-    borderColor: '#000',
-    backgroundColor: '#0002'
+    borderBottomWidth: 2,
+    borderColor: '#362779',
+    backgroundColor: '#0001',
+    borderRadius: 8,
 
   },
   paymentMethodContainer:{
@@ -175,9 +160,10 @@ const styles=StyleSheet.create({
     marginVertical: 8,
     justifyContent: 'center',
     width:'100%',
-    borderWidth: 2,
-    borderColor: '#000',
-    backgroundColor: '#0002'
+    borderBottomWidth: 2,
+    borderColor: '#362779',
+    backgroundColor: '#0001',
+    borderRadius: 8,
   },
   holi:{
     //borderWidth: 3

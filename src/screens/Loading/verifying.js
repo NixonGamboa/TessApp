@@ -27,6 +27,7 @@ class Log extends Component {
 			StatusBar.setBackgroundColor('transparent')
       		StatusBar.setTranslucent(true)
 		});
+    console.log(this.props.navigation.dangerouslyGetParent().state)
 		
 		firebase.auth().onAuthStateChanged((user) => {
 	  		console.log(user)

@@ -2,19 +2,22 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import firebase from 'react-native-firebase';
 import { GoogleSignin } from 'react-native-google-signin';
+import { NavigationActions } from 'react-navigation';
 
-
-
-import TahnkYou from '../components/thank-you';
+import ProfileEmpty from '../components/profile-empty';
+import ProfileComponent from '../components/profile-component';
 import stateInit from '../../../redux/state-init';
 
 
 function mapStateToProps(state){
   return {
-    state:state
+    user:state.user
   }
 }
 
+const navigateAction = NavigationActions.navigate({
+  routeName: 'Verify',
+});
 
 const thankText="Tu apoyo nos hace cada dia mejores personas, esperamos que tu confianza aumente con cada uno de nuestros servicios. Te contactaremos para confirmar tú pedido."
 class Finish extends Component {
@@ -51,13 +54,28 @@ class Finish extends Component {
     //this.props.navigation.navigate('Home')
     //console.log('Home')
     }
+  toLogin = ()=> {
+    console.log('to login')
+    console.log(this.props.navigation.dangerouslyGetParent().state)
+    console.log(this.props.navigation.navigate('Login'))
+    this.props.navigation.navigate('Login');
+    }
+  result = (isVerify)=>{
+    if (isVerify) {
+      return(
+        <ProfileComponent
+          handlePress={this.handlePress}
+          user={this.props.user} />
+        );
+    }else{
+      return(
+        <ProfileEmpty
+          toLogin={this.toLogin} />
+        );
+    }
+  }
   render(){
-    return(
-      <TahnkYou
-        handlePress={this.handlePress}
-        txt={thankText}
-        />
-      );
+    return this.result(this.props.user.emailVerified);
   }
 }
 export default connect(mapStateToProps)(Finish);

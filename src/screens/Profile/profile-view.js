@@ -2,10 +2,10 @@ import React,{Component} from 'react';
 import {StatusBar} from 'react-native';
 
 import Layout from '../../sections/layout-view'
-import Finish from './containers/finish';
+import Profile from './containers/profile';
 
 
-class FinishView extends Component {
+class ProfileView extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
         title: 'Gracias por tu compra.'
@@ -24,11 +24,11 @@ class FinishView extends Component {
   render(){
     return(
       <Layout>
-        <Finish
+        <Profile
           navigation={this.props.navigation}
         />
       </Layout>
       );
   }
 }
-export default FinishView;
+export default ProfileView;

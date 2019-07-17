@@ -12,6 +12,7 @@ import Finish from './src/screens/7Finish/finish-view';
 import Login from './src/screens/1login/login-view';
 import Verifying from './src/screens/Loading/verifying';
 import About from './src/screens/About/about-view';
+import Profile from './src/screens/Profile/profile-view';
 
 const AppNavigator = createStackNavigator(
   { Home,
@@ -51,7 +52,7 @@ AppNavigator.navigationOptions = ({ navigation }) => {
 const TabNavigator = createBottomTabNavigator(
   {
     Profile:{
-      screen:RegisterForm,
+      screen:Profile,
       navigationOptions:{
         title:'Perfil',
         //tabBarIcon: <Icons name={'user'} size={25} color={'#7d2181'} /> ,
@@ -120,10 +121,11 @@ import Layout from './src/sections/general-layout';
 const PruebaContainer = createAppContainer(TabNavigator);
 
 class Prueba extends Component {
+  static router = TabNavigator.router;
   render() {
     return (
       <Layout>
-        <PruebaContainer/>
+        <TabNavigator navigation={this.props.navigation}/>
       </Layout>
     );
   }

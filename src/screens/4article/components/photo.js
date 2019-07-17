@@ -8,7 +8,9 @@ function Photo (props) {
       	<View style={styles.containerAdd} >
             <ImageBackground 
               source = {{uri: props.dir }}
-              style = {styles.add} >
+              style = {styles.add}
+              resizeMode="contain"
+               >
                	{/*<View style={styles.txtContainer} >
                   	<Text style={styles.txtTitle} >{ props.title }</Text>
                   	<Text style={styles.txtSubtitle} >{ props.subtitle }</Text>
@@ -30,7 +32,6 @@ const styles = StyleSheet.create({
     height: '100%',
     justifyContent:'flex-end',
     alignItems: 'flex-start', 
-    resizeMode:'cover',
   },
   /*txtContainer:{
     justifyContent:'center',
